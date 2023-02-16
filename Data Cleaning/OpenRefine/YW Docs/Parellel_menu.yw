@@ -1,0 +1,575 @@
+#@begin Parallel_OR #@desc Parallel OpenRefine Workflow
+#@param newColumnName:occasion
+#@param newColumnName:physical_description
+#@param oldColumnName:keywords_facet
+#@param expression:value.replace(/\\s+/,'_')
+#@param oldColumnName:physical_description_facet
+#@param oldColumnName:notes_facet
+#@param oldColumnName:sponsor_facet
+#@param expression:value.trim()
+#@param newColumnName:name
+#@param oldColumnName:location_facet
+#@param newColumnName:sponsor
+#@param oldColumnName:currency_facet
+#@param oldColumnName:event_facet
+#@param newColumnName:notes
+#@param expression:value.toUppercase()
+#@param oldColumnName:occasion_facet
+#@param oldColumnName:venue_facet
+#@param newColumnName:keywords
+#@param newColumnName:currency
+#@param expression:value
+#@param newColumnName:venue
+#@param expression:value.toNumber()
+#@param oldColumnName:name_facet
+#@param expression:value.toDate()
+#@param newColumnName:location
+#@param newColumnName:event
+#@in sponsor
+#@in location_3
+#@in currency_1
+#@in language
+#@in language_1
+#@in place_2
+#@in notes_1
+#@in venue_facet
+#@in location_2
+#@in date
+#@in physical_description_facet
+#@in currency_2
+#@in occasion_1
+#@in language_3
+#@in event_2
+#@in notes_3
+#@in location_type
+#@in keywords_3
+#@in currency_symbol_2
+#@in id
+#@in status_1
+#@in venue_facet_1
+#@in name_2
+#@in location_1
+#@in currency_symbol
+#@in name_facet_1
+#@in event
+#@in sponsor_2
+#@in notes_2
+#@in dish_count
+#@in event_6
+#@in keywords_2
+#@in location_facet
+#@in notes_facet
+#@in event_facet_3
+#@in notes
+#@in sponsor_1
+#@in status_2
+#@in physical_description_2
+#@in keywords_1
+#@in location
+#@in sponsor_facet
+#@in name
+#@in occasion_3
+#@in event_facet_2
+#@in name_3
+#@in keywords_4
+#@in occasion_facet_1
+#@in name_1
+#@in occasion_2
+#@in currency_symbol_1
+#@in occasion_facet_3
+#@in sponsor_3
+#@in page_count
+#@in status
+#@in keywords_facet
+#@in place_4
+#@in place_1
+#@in venue_1
+#@in currency
+#@in place_3
+#@in language_2
+#@in name_facet
+#@in physical_description_1
+#@in physical_description
+#@in keywords
+#@in venue
+#@in event_4
+#@in event_facet
+#@in currency_3
+#@in currency_facet
+#@in place_5
+#@in venue_2
+#@in venue_3
+#@in event_1
+#@in occasion_facet_2
+#@in call_number
+#@in event_5
+#@in place
+#@in event_3
+#@in physical_description_3
+#@in occasion
+#@in event_facet_1
+#@in occasion_facet
+#@out CleanData
+#@begin core/text-transform0 #@desc Text transform on cells in column event using expression value.trim()
+#@param expression:value.trim()
+#@in event
+#@out event_1
+#@end core/text-transform0
+#@begin core/text-transform1 #@desc Text transform on cells in column event using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in event_1
+#@out event_2
+#@end core/text-transform1
+#@begin core/text-transform2 #@desc Text transform on cells in column event using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in event_2
+#@out event_3
+#@end core/text-transform2
+#@begin core/mass-edit3 #@desc Mass edit cells in column event
+#@param expression:value
+#@in event_3
+#@out event_4
+#@end core/mass-edit3
+#@begin core/text-transform4 #@desc Text transform on cells in column event using expression value.trim()
+#@param expression:value.trim()
+#@in event_4
+#@out event_5
+#@end core/text-transform4
+#@begin core/text-transform5 #@desc Text transform on cells in column event using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in event_5
+#@out event_6
+#@end core/text-transform5
+#@begin core/text-transform6 #@desc Text transform on cells in column event_facet using expression value.trim()
+#@param expression:value.trim()
+#@in event_facet
+#@out event_facet_1
+#@end core/text-transform6
+#@begin core/text-transform7 #@desc Text transform on cells in column event_facet using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in event_facet_1
+#@out event_facet_2
+#@end core/text-transform7
+#@begin core/text-transform8 #@desc Text transform on cells in column event_facet using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in event_facet_2
+#@out event_facet_3
+#@end core/text-transform8
+#@begin core/column-removal9 #@desc Remove column event
+#@in event_6
+#@out remove-event
+#@end core/column-removal9
+#@begin core/column-rename10 #@desc Rename column event_facet to event
+#@param oldColumnName:event_facet
+#@param newColumnName:event
+#@in event_facet_3
+#@out event_7
+#@end core/column-rename10
+#@begin core/text-transform11 #@desc Text transform on cells in column id using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in id
+#@out id_1
+#@end core/text-transform11
+#@begin core/text-transform12 #@desc Text transform on cells in column name using expression value.trim()
+#@param expression:value.trim()
+#@in name
+#@out name_1
+#@end core/text-transform12
+#@begin core/text-transform13 #@desc Text transform on cells in column name using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in name_1
+#@out name_2
+#@end core/text-transform13
+#@begin core/text-transform14 #@desc Text transform on cells in column name using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in name_2
+#@out name_3
+#@end core/text-transform14
+#@begin core/mass-edit15 #@desc Mass edit cells in column name_facet
+#@param expression:value
+#@in name_facet
+#@out name_facet_1
+#@end core/mass-edit15
+#@begin core/column-removal16 #@desc Remove column name
+#@in name_3
+#@out remove-name
+#@end core/column-removal16
+#@begin core/column-rename17 #@desc Rename column name_facet to name
+#@param oldColumnName:name_facet
+#@param newColumnName:name
+#@in name_facet_1
+#@out name_4
+#@end core/column-rename17
+#@begin core/text-transform18 #@desc Text transform on cells in column sponsor using expression value.trim()
+#@param expression:value.trim()
+#@in sponsor
+#@out sponsor_1
+#@end core/text-transform18
+#@begin core/text-transform19 #@desc Text transform on cells in column sponsor using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in sponsor_1
+#@out sponsor_2
+#@end core/text-transform19
+#@begin core/text-transform20 #@desc Text transform on cells in column sponsor using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in sponsor_2
+#@out sponsor_3
+#@end core/text-transform20
+#@begin core/column-removal21 #@desc Remove column sponsor
+#@in sponsor_3
+#@out remove-sponsor
+#@end core/column-removal21
+#@begin core/column-rename22 #@desc Rename column sponsor_facet to sponsor
+#@param oldColumnName:sponsor_facet
+#@param newColumnName:sponsor
+#@in sponsor_facet
+#@out sponsor_4
+#@end core/column-rename22
+#@begin core/text-transform23 #@desc Text transform on cells in column venue using expression value.trim()
+#@param expression:value.trim()
+#@in venue
+#@out venue_1
+#@end core/text-transform23
+#@begin core/text-transform24 #@desc Text transform on cells in column venue using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in venue_1
+#@out venue_2
+#@end core/text-transform24
+#@begin core/text-transform25 #@desc Text transform on cells in column venue using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in venue_2
+#@out venue_3
+#@end core/text-transform25
+#@begin core/mass-edit26 #@desc Mass edit cells in column venue_facet
+#@param expression:value
+#@in venue_facet
+#@out venue_facet_1
+#@end core/mass-edit26
+#@begin core/column-removal27 #@desc Remove column venue
+#@in venue_3
+#@out remove-venue
+#@end core/column-removal27
+#@begin core/column-rename28 #@desc Rename column venue_facet to venue
+#@param oldColumnName:venue_facet
+#@param newColumnName:venue
+#@in venue_facet_1
+#@out venue_4
+#@end core/column-rename28
+#@begin core/text-transform29 #@desc Text transform on cells in column physical_description using expression value.trim()
+#@param expression:value.trim()
+#@in physical_description
+#@out physical_description_1
+#@end core/text-transform29
+#@begin core/text-transform30 #@desc Text transform on cells in column physical_description using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in physical_description_1
+#@out physical_description_2
+#@end core/text-transform30
+#@begin core/text-transform31 #@desc Text transform on cells in column physical_description using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in physical_description_2
+#@out physical_description_3
+#@end core/text-transform31
+#@begin core/column-removal32 #@desc Remove column physical_description
+#@in physical_description_3
+#@out remove-physical_description
+#@end core/column-removal32
+#@begin core/column-rename33 #@desc Rename column physical_description_facet to physical_description
+#@param oldColumnName:physical_description_facet
+#@param newColumnName:physical_description
+#@in physical_description_facet
+#@out physical_description_4
+#@end core/column-rename33
+#@begin core/text-transform34 #@desc Text transform on cells in column notes using expression value.trim()
+#@param expression:value.trim()
+#@in notes
+#@out notes_1
+#@end core/text-transform34
+#@begin core/text-transform35 #@desc Text transform on cells in column notes using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in notes_1
+#@out notes_2
+#@end core/text-transform35
+#@begin core/text-transform36 #@desc Text transform on cells in column notes using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in notes_2
+#@out notes_3
+#@end core/text-transform36
+#@begin core/column-removal37 #@desc Remove column notes
+#@in notes_3
+#@out remove-notes
+#@end core/column-removal37
+#@begin core/column-rename38 #@desc Rename column notes_facet to notes
+#@param oldColumnName:notes_facet
+#@param newColumnName:notes
+#@in notes_facet
+#@out notes_4
+#@end core/column-rename38
+#@begin core/text-transform39 #@desc Text transform on cells in column call_number using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in call_number
+#@out call_number_1
+#@end core/text-transform39
+#@begin core/text-transform40 #@desc Text transform on cells in column keywords using expression value.trim()
+#@param expression:value.trim()
+#@in keywords
+#@out keywords_1
+#@end core/text-transform40
+#@begin core/text-transform41 #@desc Text transform on cells in column keywords using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in keywords_1
+#@out keywords_2
+#@end core/text-transform41
+#@begin core/text-transform42 #@desc Text transform on cells in column keywords using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in keywords_2
+#@out keywords_3
+#@end core/text-transform42
+#@begin core/column-removal43 #@desc Remove column keywords
+#@in keywords_3
+#@out remove-keywords
+#@end core/column-removal43
+#@begin core/column-rename44 #@desc Rename column keywords_facet to keywords
+#@param oldColumnName:keywords_facet
+#@param newColumnName:keywords
+#@in keywords_facet
+#@out keywords_4
+#@end core/column-rename44
+#@begin core/text-transform45 #@desc Text transform on cells in column language using expression value.trim()
+#@param expression:value.trim()
+#@in language
+#@out language_1
+#@end core/text-transform45
+#@begin core/text-transform46 #@desc Text transform on cells in column language using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in language_1
+#@out language_2
+#@end core/text-transform46
+#@begin core/text-transform47 #@desc Text transform on cells in column language using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in language_2
+#@out language_3
+#@end core/text-transform47
+#@begin core/column-removal48 #@desc Remove column keywords
+#@in keywords_4
+#@out remove-keywords_1
+#@end core/column-removal48
+#@begin core/column-removal49 #@desc Remove column language
+#@in language_3
+#@out remove-language
+#@end core/column-removal49
+#@begin core/text-transform50 #@desc Text transform on cells in column date using expression value.toDate()
+#@param expression:value.toDate()
+#@in date
+#@out date_1
+#@end core/text-transform50
+#@begin core/text-transform51 #@desc Text transform on cells in column location using expression value.trim()
+#@param expression:value.trim()
+#@in location
+#@out location_1
+#@end core/text-transform51
+#@begin core/text-transform52 #@desc Text transform on cells in column location using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in location_1
+#@out location_2
+#@end core/text-transform52
+#@begin core/text-transform53 #@desc Text transform on cells in column location using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in location_2
+#@out location_3
+#@end core/text-transform53
+#@begin core/column-removal54 #@desc Remove column location
+#@in location_3
+#@out remove-location
+#@end core/column-removal54
+#@begin core/column-rename55 #@desc Rename column location_facet to location
+#@param oldColumnName:location_facet
+#@param newColumnName:location
+#@in location_facet
+#@out location_4
+#@end core/column-rename55
+#@begin core/column-removal56 #@desc Remove column location_type
+#@in location_type
+#@out remove-location_type
+#@end core/column-removal56
+#@begin core/text-transform57 #@desc Text transform on cells in column currency using expression value.trim()
+#@param expression:value.trim()
+#@in currency
+#@out currency_1
+#@end core/text-transform57
+#@begin core/text-transform58 #@desc Text transform on cells in column currency using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in currency_1
+#@out currency_2
+#@end core/text-transform58
+#@begin core/text-transform59 #@desc Text transform on cells in column currency using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in currency_2
+#@out currency_3
+#@end core/text-transform59
+#@begin core/column-removal60 #@desc Remove column currency
+#@in currency_3
+#@out remove-currency
+#@end core/column-removal60
+#@begin core/column-rename61 #@desc Rename column currency_facet to currency
+#@param oldColumnName:currency_facet
+#@param newColumnName:currency
+#@in currency_facet
+#@out currency_4
+#@end core/column-rename61
+#@begin core/text-transform62 #@desc Text transform on cells in column currency_symbol using expression value.trim()
+#@param expression:value.trim()
+#@in currency_symbol
+#@out currency_symbol_1
+#@end core/text-transform62
+#@begin core/text-transform63 #@desc Text transform on cells in column currency_symbol using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in currency_symbol_1
+#@out currency_symbol_2
+#@end core/text-transform63
+#@begin core/text-transform64 #@desc Text transform on cells in column currency_symbol using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in currency_symbol_2
+#@out currency_symbol_3
+#@end core/text-transform64
+#@begin core/text-transform65 #@desc Text transform on cells in column status using expression value.trim()
+#@param expression:value.trim()
+#@in status
+#@out status_1
+#@end core/text-transform65
+#@begin core/text-transform66 #@desc Text transform on cells in column status using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in status_1
+#@out status_2
+#@end core/text-transform66
+#@begin core/text-transform67 #@desc Text transform on cells in column status using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in status_2
+#@out status_3
+#@end core/text-transform67
+#@begin core/text-transform68 #@desc Text transform on cells in column page_count using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in page_count
+#@out page_count_1
+#@end core/text-transform68
+#@begin core/text-transform69 #@desc Text transform on cells in column dish_count using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in dish_count
+#@out dish_count_1
+#@end core/text-transform69
+#@begin core/text-transform70 #@desc Text transform on cells in column occasion using expression value.trim()
+#@param expression:value.trim()
+#@in occasion
+#@out occasion_1
+#@end core/text-transform70
+#@begin core/text-transform71 #@desc Text transform on cells in column occasion using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in occasion_1
+#@out occasion_2
+#@end core/text-transform71
+#@begin core/text-transform72 #@desc Text transform on cells in column occasion using expression value.toUppercase()
+#@param expression:value.toUppercase()
+#@in occasion_2
+#@out occasion_3
+#@end core/text-transform72
+#@begin core/mass-edit73 #@desc Mass edit cells in column occasion_facet
+#@param expression:value
+#@in occasion_facet
+#@out occasion_facet_1
+#@end core/mass-edit73
+#@begin core/mass-edit74 #@desc Mass edit cells in column occasion_facet
+#@param expression:value
+#@in occasion_facet_1
+#@out occasion_facet_2
+#@end core/mass-edit74
+#@begin core/mass-edit75 #@desc Mass edit cells in column occasion_facet
+#@param expression:value
+#@in occasion_facet_2
+#@out occasion_facet_3
+#@end core/mass-edit75
+#@begin core/column-removal76 #@desc Remove column occasion
+#@in occasion_3
+#@out remove-occasion
+#@end core/column-removal76
+#@begin core/column-rename77 #@desc Rename column occasion_facet to occasion
+#@param oldColumnName:occasion_facet
+#@param newColumnName:occasion
+#@in occasion_facet_3
+#@out occasion_4
+#@end core/column-rename77
+#@begin core/text-transform78 #@desc Text transform on cells in column place using expression value.trim()
+#@param expression:value.trim()
+#@in place
+#@out place_1
+#@end core/text-transform78
+#@begin core/text-transform79 #@desc Text transform on cells in column place using expression value.replace(/\\s+/,' ')
+#@param expression:value.replace(/\\s+/,'_')
+#@in place_1
+#@out place_2
+#@end core/text-transform79
+#@begin core/text-transform80 #@desc Text transform on cells in column place using expression value.trim()
+#@param expression:value.trim()
+#@in place_2
+#@out place_3
+#@end core/text-transform80
+#@begin core/mass-edit81 #@desc Mass edit cells in column place
+#@param expression:value
+#@in place_3
+#@out place_4
+#@end core/mass-edit81
+#@begin core/mass-edit82 #@desc Mass edit cells in column place
+#@param expression:value
+#@in place_4
+#@out place_5
+#@end core/mass-edit82
+#@begin core/mass-edit83 #@desc Mass edit cells in column place
+#@param expression:value
+#@in place_5
+#@out place_6
+#@end core/mass-edit83
+#@begin CombineDataCleaningChanges
+#@in event_7
+#@in event_facet_3
+#@in remove-event
+#@in id_1
+#@in name_4
+#@in name_facet_1
+#@in remove-name
+#@in sponsor_4
+#@in remove-sponsor
+#@in sponsor_facet
+#@in venue_4
+#@in venue_facet_1
+#@in remove-venue
+#@in physical_description_4
+#@in remove-physical_description
+#@in physical_description_facet
+#@in notes_4
+#@in remove-notes
+#@in notes_facet
+#@in call_number_1
+#@in keywords_4
+#@in remove-keywords_1
+#@in keywords_facet
+#@in language_3
+#@in remove-language
+#@in date_1
+#@in location_4
+#@in remove-location
+#@in location_facet
+#@in location_type
+#@in remove-location_type
+#@in currency_4
+#@in remove-currency
+#@in currency_facet
+#@in currency_symbol_3
+#@in status_3
+#@in page_count_1
+#@in dish_count_1
+#@in occasion_4
+#@in occasion_facet_3
+#@in remove-occasion
+#@in place_6
+#@out CleanData
+#@end CombineDataCleaningChanges
+#@end Parallel_OR

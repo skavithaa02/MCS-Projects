@@ -1,0 +1,7135 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DINNER",
+          "[DINNER]",
+          "(DINNER)",
+          "DINNER;",
+          "DINNER (?)",
+          "DINNER(?)",
+          "[DINNER?]",
+          "(?DINNER?)",
+          "DINNER,",
+          "DINNER?",
+          "[?DINNER?]",
+          "[DINNER ?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER"
+      },
+      {
+        "from": [
+          "LUNCH",
+          "[LUNCH]",
+          "(?LUNCH?)",
+          "LUNCH;",
+          "[LUNCH?]",
+          "(LUNCH)",
+          "LUNCH (?)",
+          "LUNCH."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCH"
+      },
+      {
+        "from": [
+          "BREAKFAST",
+          "[BREAKFAST]",
+          "BREAKFAST;",
+          "BREAKFAST (?)",
+          "BREAKFAST(?)",
+          "[BREAKFAST ?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BREAKFAST"
+      },
+      {
+        "from": [
+          "DAILY MENU",
+          "(DAILY MENU)",
+          "DAILY MENU;",
+          "[DAILY MENU?]",
+          "[DAILY] MENU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY MENU"
+      },
+      {
+        "from": [
+          "SUPPER",
+          "SUPPER (?)",
+          "SUPPER(?)",
+          "SUPPER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUPPER"
+      },
+      {
+        "from": [
+          "CARTE DU JOUR",
+          "(CARTE DU JOUR)",
+          "CARTE DU JOUR;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARTE DU JOUR"
+      },
+      {
+        "from": [
+          "LUNCH & DINNER",
+          "LUNCH; DINNER",
+          "[?DINNER? - LUNCH?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCH & DINNER"
+      },
+      {
+        "from": [
+          "FRUHSTUCK-BREAKFAST",
+          "FRUHSTUCK/BREAKFAST",
+          "FRUHSTUCK/BREAKFAST;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRUHSTUCK/BREAKFAST"
+      },
+      {
+        "from": [
+          "DAILY MENU, DINNER",
+          "DAILY DINNER MENU",
+          "DAILY MENU; DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY DINNER MENU"
+      },
+      {
+        "from": [
+          "A LA CARTE; DINNER",
+          "DINNER A LA CARTE",
+          "DINNER; A LA CARTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER A LA CARTE"
+      },
+      {
+        "from": [
+          "DAILY LUNCH MENU",
+          "DAILY MENU, LUNCH",
+          "DAILY MENU; LUNCH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY LUNCH MENU"
+      },
+      {
+        "from": [
+          "LUNCH OR DINNER",
+          "DINNER OR LUNCH",
+          "LUNCH &/OR DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCH OR DINNER"
+      },
+      {
+        "from": [
+          "LUNCHEON",
+          "[LUNCHEON]",
+          "LUNCHEON;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCHEON"
+      },
+      {
+        "from": [
+          "ANNIVERSARY DINNER",
+          "ANNIVERSARY DINNER?",
+          "ANNIVERSARY [DINNER]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNIVERSARY DINNER"
+      },
+      {
+        "from": [
+          "MITTAGESSEN",
+          "MITTAG-ESSEN",
+          "MITTAGESSEN;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MITTAGESSEN"
+      },
+      {
+        "from": [
+          "INSPECTION TRIP - LUNCHEON",
+          "INSPECTION TRIP, LUNCHEON",
+          "INSPECTION TRIP, LUNCHEON;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSPECTION TRIP - LUNCHEON"
+      },
+      {
+        "from": [
+          "BANQUET AND RECEPTION",
+          "RECEPTION AND BANQUET"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BANQUET AND RECEPTION"
+      },
+      {
+        "from": [
+          "TABLE D'HOTE DINNER",
+          "DINNER TABLE D'HOTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TABLE D'HOTE DINNER"
+      },
+      {
+        "from": [
+          "AFTERNOON TEA",
+          "AFTERNOON TEA ["
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AFTERNOON TEA"
+      },
+      {
+        "from": [
+          "DINNER - SECOND CABIN",
+          "DINNER SECOND CABIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER - SECOND CABIN"
+      },
+      {
+        "from": [
+          "INSPECTION TRIP, DINNER",
+          "INSPECTION TRIP, DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSPECTION TRIP, DINNER"
+      },
+      {
+        "from": [
+          "MITTAGESSEN/DINNER",
+          "MITTAGESSEN[DINNER]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MITTAGESSEN/DINNER"
+      },
+      {
+        "from": [
+          "WINE LIST",
+          "WINE LIST;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WINE LIST"
+      },
+      {
+        "from": [
+          "DINNER,SECOND CABIN",
+          "DINNER-SECOND CABIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER-SECOND CABIN"
+      },
+      {
+        "from": [
+          "REUNION",
+          "[?REUNION?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "REUNION"
+      },
+      {
+        "from": [
+          "LUNCHEON TABLE D'HOTE",
+          "TABLE D'HOTE LUNCHEON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TABLE D'HOTE LUNCHEON"
+      },
+      {
+        "from": [
+          "LADIES NIGHT",
+          "LADIES' NIGHT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LADIES NIGHT"
+      },
+      {
+        "from": [
+          "BREAKFAST AND SUPPER",
+          "SUPPER AND BREAKFAST"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BREAKFAST AND SUPPER"
+      },
+      {
+        "from": [
+          "WEDDING",
+          "WEDDING(?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WEDDING"
+      },
+      {
+        "from": [
+          "RECEPTION",
+          "[RECEPTION]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RECEPTION"
+      },
+      {
+        "from": [
+          "WASHINGTON'S BIRTHDAY BANQUET",
+          "BANQUET (WASHINGTON'S BIRTHDAY?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WASHINGTON'S BIRTHDAY BANQUET"
+      },
+      {
+        "from": [
+          "ABEND-ESSEN",
+          "ABENDESSEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ABENDESSEN"
+      },
+      {
+        "from": [
+          "MENU",
+          "MENU;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MENU"
+      },
+      {
+        "from": [
+          "ANNUAL DINNER",
+          "[ANNUAL DINNER?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNUAL DINNER"
+      },
+      {
+        "from": [
+          "BREAKFAST (?) HELD BY NORDEUTSCHER LLOYD BREMEN AT ON BOARD THE SS GEORGE WASHINGTON",
+          "BREAKFAST HELD BY NORDEUTSCHER LLOYD BREMEN AT ON BOARD THE SS GEORGE WASHINGTON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BREAKFAST HELD BY NORDEUTSCHER LLOYD BREMEN AT ON BOARD THE SS GEORGE WASHINGTON"
+      },
+      {
+        "from": [
+          "DINER",
+          "[DINER]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER"
+      },
+      {
+        "from": [
+          "DINNER TO ABOVE",
+          "DINNER TO ABOVE;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER TO ABOVE"
+      },
+      {
+        "from": [
+          "DAILY LUNCH;",
+          "DAILY LUNCH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY LUNCH"
+      },
+      {
+        "from": [
+          "LUNCHEON A LA CARTE",
+          "LUNCHEON, A LA CARTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCHEON A LA CARTE"
+      },
+      {
+        "from": [
+          "LINCOLN'S BIRTHDAY DINNER",
+          "DINNER, LINCOLNS BIRTHDAY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LINCOLN'S BIRTHDAY DINNER"
+      },
+      {
+        "from": [
+          "NEW YEAR'S DINNER",
+          "NEW YEARS DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NEW YEAR'S DINNER"
+      },
+      {
+        "from": [
+          "FIFTH ANNUAL DINNER",
+          "DINNER, FIFTH ANNUAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FIFTH ANNUAL DINNER"
+      },
+      {
+        "from": [
+          "ST. VALENTINE'S DAY DINNER",
+          "ST. VALENTINES DAY DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ST. VALENTINE'S DAY DINNER"
+      },
+      {
+        "from": [
+          "FRUHSTUCK/LUNCH",
+          "FRUHSTUCK-LUNCH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRUHSTUCK/LUNCH"
+      },
+      {
+        "from": [
+          "NEW YEAR'S DAY DINNER",
+          "NEW YEARS DAY DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NEW YEAR'S DAY DINNER"
+      },
+      {
+        "from": [
+          "EIGHTH ANNUAL BANQUET",
+          "EIGHTH ANNUAL BANQUET'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EIGHTH ANNUAL BANQUET"
+      },
+      {
+        "from": [
+          "DAILY MENU, BREAKFAST",
+          "DAILY BREAKFAST MENU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY BREAKFAST MENU"
+      },
+      {
+        "from": [
+          "DAILY MENU, LUNCHEON",
+          "DAILY LUNCHEON MENU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY LUNCHEON MENU"
+      },
+      {
+        "from": [
+          "PRIVATE DINNER",
+          "[PRIVATE DINNER?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PRIVATE DINNER"
+      },
+      {
+        "from": [
+          "INSPECTION TRIP, BREAKFAST",
+          "INSPECTION TRIP - BREAKFAST"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSPECTION TRIP - BREAKFAST"
+      },
+      {
+        "from": [
+          "MITTAGESSEN - DINNER",
+          "MITTAGESSEN [DINNER]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MITTAGESSEN - DINNER"
+      },
+      {
+        "from": [
+          "LUNCH-DINNER",
+          "LUNCH;DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUNCH-DINNER"
+      },
+      {
+        "from": [
+          "MIDDAG/DINNER",
+          "MIDDAG-DINNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MIDDAG-DINNER"
+      },
+      {
+        "from": [
+          "DAILY BILL OF FARE",
+          "DAILY BILL OF FARE;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY BILL OF FARE"
+      }
+    ],
+    "description": "Mass edit cells in column event"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "event",
+    "expression": "grel:value.replace('[',' ' )\n.replace(']',' ' )\n.replace('{',' ' )\n.replace('}',' ' )\n.replace('\"',' ' )\n.replace(/[,;]$/, ' ')\n.replace('?',' ')\n.replace(/\\'/,' ')\n.replace(')',' ')\n.replace('(',' ')\n.replace('*',' ' )\n.replace('\"',' ' )",
+    "onError": "keep-original",
+    "newColumnName": "event_facet",
+    "columnInsertIndex": 4,
+    "description": "Create column event_facet at index 4 based on column event using expression grel:value.replace('[',' ' )\n.replace(']',' ' )\n.replace('{',' ' )\n.replace('}',' ' )\n.replace('\"',' ' )\n.replace(/[,;]$/, ' ')\n.replace('?',' ')\n.replace(/\\'/,' ')\n.replace(')',' ')\n.replace('(',' ')\n.replace('*',' ' )\n.replace('\"',' ' )"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event_facet",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event_facet using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event_facet",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event_facet using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event_facet",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event_facet using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "event",
+    "description": "Remove column event"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "event_facet",
+    "newColumnName": "event",
+    "description": "Rename column event_facet to event"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "id",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column id using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column name using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "name",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "name_facet",
+    "columnInsertIndex": 2,
+    "description": "Create column name_facet at index 2 based on column name using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name_facet",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "[RESTAURANT NAME AND/OR LOCATION NOT GIVEN]",
+          "RESTAURANT NAME AND/OR LOCATION NOT GIVEN]",
+          "RESTAURANT NAME AND/OR LOCATION NOT GIVEN",
+          "[RESTAURANT NAME AND/OR LOCATION NOT GIVEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RESTAURANT NAME AND/OR LOCATION NOT GIVEN"
+      },
+      {
+        "from": [
+          "THE MERCHANT'S CLUB",
+          "THE MERCHANTS CLUB",
+          "THE MERCHANTS' CLUB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "THE MERCHANTS CLUB"
+      },
+      {
+        "from": [
+          "HOTEL IMPERIAL",
+          "IMPERIAL HOTEL",
+          "IMPÉRIAL HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL IMPERIAL"
+      },
+      {
+        "from": [
+          "DELMONICOS",
+          "DELMONICO'S",
+          "DELMONICOS."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DELMONICOS"
+      },
+      {
+        "from": [
+          "RIGGS'",
+          "RIGG'S",
+          "RIGGS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RIGGS"
+      },
+      {
+        "from": [
+          "CHILDS",
+          "CHILD'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHILDS"
+      },
+      {
+        "from": [
+          "HOTEL MARIE ANTOINETTE",
+          "MARIE ANTOINETTE HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL MARIE ANTOINETTE"
+      },
+      {
+        "from": [
+          "HOTEL KNICKERBOCKER",
+          "KNICKERBOCKER HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL KNICKERBOCKER"
+      },
+      {
+        "from": [
+          "MET-LIFE BUILDING",
+          "METLIFE BUILDING"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "METLIFE BUILDING"
+      },
+      {
+        "from": [
+          "S.S. \"FREDERIK VIII\"",
+          "S.S. FREDERIK VIII"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "S.S. FREDERIK VIII"
+      },
+      {
+        "from": [
+          "FAIRMONT HOTEL",
+          "HOTEL FAIRMONT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL FAIRMONT"
+      },
+      {
+        "from": [
+          "COPLEY-PLAZA HOTEL",
+          "HOTEL COPLEY-PLAZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL COPLEY-PLAZA"
+      },
+      {
+        "from": [
+          "ST. DENIS HOTEL",
+          "HOTEL ST. DENIS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL ST. DENIS"
+      },
+      {
+        "from": [
+          "COSMOPOLITAN HOTEL",
+          "COSMOPOLITAN... HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COSMOPOLITAN HOTEL"
+      },
+      {
+        "from": [
+          "HOTEL PONTCHARTRAIN",
+          "PONTCHARTRAIN HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL PONTCHARTRAIN"
+      },
+      {
+        "from": [
+          "HOTEL ASTOR",
+          "ASTOR HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL ASTOR"
+      },
+      {
+        "from": [
+          "PALACE HOTEL",
+          "PALACE HÔTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PALACE HOTEL"
+      },
+      {
+        "from": [
+          "RIGG'S TWENTIETH STREET RESTAURANT",
+          "RIGGS' TWENTIETH STREET RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RIGG'S TWENTIETH STREET RESTAURANT"
+      },
+      {
+        "from": [
+          "ADAMS' RESTAURANT",
+          "ADAM'S RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ADAM'S RESTAURANT"
+      },
+      {
+        "from": [
+          "FRAUNCES' TAVERN",
+          "FRAUNCES TAVERN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRAUNCES TAVERN"
+      },
+      {
+        "from": [
+          "GROCERS HALL",
+          "GROCERS' HALL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GROCERS HALL"
+      },
+      {
+        "from": [
+          "HOTEL STATLER",
+          "STATLER HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL STATLER"
+      },
+      {
+        "from": [
+          "U.S.S. NEW YORK",
+          "U.S.S. NEW YORK (?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "U.S.S. NEW YORK"
+      },
+      {
+        "from": [
+          "LAFAYETTE HOTEL",
+          "HOTEL LAFAYETTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL LAFAYETTE"
+      },
+      {
+        "from": [
+          "THE NEW WILLARD HOTEL",
+          "THE NEW WILLARD HOTEL."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "THE NEW WILLARD HOTEL"
+      },
+      {
+        "from": [
+          "ELKS CLUB HOUSE",
+          "ELKS' CLUB HOUSE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ELKS CLUB HOUSE"
+      },
+      {
+        "from": [
+          "HOFBRAU HAUS",
+          "HOFBRÄU HAUS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOFBRAU HAUS"
+      },
+      {
+        "from": [
+          "MERCHANT'S CLUB",
+          "MERCHANTS CLUB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MERCHANTS CLUB"
+      },
+      {
+        "from": [
+          "HOTEL SAVOY",
+          "SAVOY HOTEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOTEL SAVOY"
+      },
+      {
+        "from": [
+          "CAFÉ BOULEVARD",
+          "CAFE BOULEVARD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAFE BOULEVARD"
+      }
+    ],
+    "description": "Mass edit cells in column name_facet"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "name",
+    "description": "Remove column name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "name_facet",
+    "newColumnName": "name",
+    "description": "Rename column name_facet to name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "sponsor",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "sponsor_facet",
+    "columnInsertIndex": 3,
+    "description": "Create column sponsor_facet at index 3 based on column sponsor using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "sponsor",
+    "description": "Remove column sponsor"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "sponsor_facet",
+    "newColumnName": "sponsor",
+    "description": "Rename column sponsor_facet to sponsor"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "venue",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "venue_facet",
+    "columnInsertIndex": 5,
+    "description": "Create column venue_facet at index 5 based on column venue using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue_facet",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SOC;",
+          "SOC",
+          "[SOC?];",
+          "SOC(?);",
+          "SOC.",
+          "[SOC]",
+          "SOC?;",
+          "(SOC);",
+          "(SOC?)",
+          "(SOC?);",
+          "SOC (?);",
+          "SOC(?):",
+          "[?SOC];",
+          "[SOC;]",
+          "[SOC?]",
+          "[SOC];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOC"
+      },
+      {
+        "from": [
+          "GOVT;",
+          "GOVT(?);",
+          "GOV'T;",
+          "[GOVT?];",
+          "GOV'T",
+          "GOV'T.",
+          "GOVT",
+          "GOVT?;",
+          "[GOVT?]",
+          "[GOVT];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GOVT"
+      },
+      {
+        "from": [
+          "COM",
+          "COM.",
+          "[COM]",
+          "(COM?);",
+          "COM(?);",
+          "COM.;",
+          "[COM?];",
+          "[COM}"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COM"
+      },
+      {
+        "from": [
+          "PROF;",
+          "PROF",
+          "PROF(?);",
+          "PROF.",
+          "PROF?;",
+          "[PROF?];",
+          "[PROF]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PROF"
+      },
+      {
+        "from": [
+          "EDUC;",
+          "EDUC",
+          "EDUC (?);",
+          "[EDUC];",
+          "(EDUC);",
+          "[EDUC?];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EDUC"
+      },
+      {
+        "from": [
+          "POL;",
+          "POL",
+          "[POL]",
+          "POL.;",
+          "[POL?);",
+          "[POL?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POL"
+      },
+      {
+        "from": [
+          "NAV;",
+          "NAV; (?)",
+          "NAV.",
+          "NAV",
+          "NAV(?);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NAV"
+      },
+      {
+        "from": [
+          "MIL;",
+          "MIL",
+          "MIL (?);",
+          "MIL.",
+          "[MIL?];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MIL"
+      },
+      {
+        "from": [
+          "OTHER;(PRIVATE);",
+          "OTHER,(PRIVATE);",
+          "OTHER,PRIVATE",
+          "OTHER;PRIVATE;",
+          "[OTHER;PRIVATE];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER,PRIVATE"
+      },
+      {
+        "from": [
+          "PATR;",
+          "PATR",
+          "PATR(?);",
+          "PATR."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PATR"
+      },
+      {
+        "from": [
+          "COMM",
+          "COMM.",
+          "COMM;",
+          "COMM;."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COMM"
+      },
+      {
+        "from": [
+          "OTHER (PRIVATE PARTY);",
+          "OTHER (PRIVATE PARTY)",
+          "OTHER (PRIVATE PARTY?)",
+          "OTHER (PRIVATE PARTY?);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (PRIVATE PARTY)"
+      },
+      {
+        "from": [
+          "RELIG;",
+          "RELIG",
+          "RELIG?;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RELIG"
+      },
+      {
+        "from": [
+          "OTHER (PRIVATE CLUB)",
+          "OTHER (PRIVATE CLUB);",
+          "OTHER [PRIVATE CLUB?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (PRIVATE CLUB)"
+      },
+      {
+        "from": [
+          "GOV;",
+          "GOV.",
+          "[GOV];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GOV"
+      },
+      {
+        "from": [
+          "NAVAL",
+          "NAVAL;",
+          "[NAVAL]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NAVAL"
+      },
+      {
+        "from": [
+          "SOCIAL",
+          "SOCIAL;",
+          "(SOCIAL?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOCIAL"
+      },
+      {
+        "from": [
+          "?",
+          "[?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "?"
+      },
+      {
+        "from": [
+          "POL; SOC;",
+          "SOC; POL;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POL; SOC;"
+      },
+      {
+        "from": [
+          "OTHER (CLUB);",
+          "OTHER (CLUB)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (CLUB);"
+      },
+      {
+        "from": [
+          "SOCIAL CLUB",
+          "SOCIAL CLUB?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOCIAL CLUB"
+      },
+      {
+        "from": [
+          "OTHER",
+          "OTHER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER"
+      },
+      {
+        "from": [
+          "OTHER;(PERSONAL);",
+          "OTHER(PERSONAL);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER;(PERSONAL);"
+      },
+      {
+        "from": [
+          "FOREIGN",
+          "FOREIGN;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FOREIGN"
+      },
+      {
+        "from": [
+          "OTHER (PRIVATE);",
+          "OTHER [PRIVATE];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (PRIVATE);"
+      },
+      {
+        "from": [
+          "MILITARY",
+          "[MILITARY]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MILITARY"
+      },
+      {
+        "from": [
+          "PAT;",
+          "PAT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAT"
+      },
+      {
+        "from": [
+          "(EDUCATIONAL)",
+          "EDUCATIONAL;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EDUCATIONAL;"
+      },
+      {
+        "from": [
+          "PATRIOTIC",
+          "PATRIOTIC?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PATRIOTIC"
+      },
+      {
+        "from": [
+          "PRIVATE;",
+          "(PRIVATE);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PRIVATE;"
+      },
+      {
+        "from": [
+          "PRIVATE PARTY",
+          "PRIVATE PARTY;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PRIVATE PARTY"
+      }
+    ],
+    "description": "Mass edit cells in column venue_facet"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "venue",
+    "description": "Remove column venue"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "venue_facet",
+    "newColumnName": "venue",
+    "description": "Rename column venue_facet to venue"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "physical_description",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column physical_description using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "physical_description",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column physical_description using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "physical_description",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column physical_description using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "physical_description",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "physical_description_facet",
+    "columnInsertIndex": 7,
+    "description": "Create column physical_description_facet at index 7 based on column physical_description using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "physical_description",
+    "description": "Remove column physical_description"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "physical_description_facet",
+    "newColumnName": "physical_description",
+    "description": "Rename column physical_description_facet to physical_description"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "notes",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column notes using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "notes",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column notes using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "notes",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column notes using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "notes",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "notes_facet",
+    "columnInsertIndex": 9,
+    "description": "Create column notes_facet at index 9 based on column notes using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "notes",
+    "description": "Remove column notes"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "notes_facet",
+    "newColumnName": "notes",
+    "description": "Rename column notes_facet to notes"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "call_number",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column call_number using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "keywords",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column keywords using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "keywords",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column keywords using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "keywords",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column keywords using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "keywords",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "keywords_facet",
+    "columnInsertIndex": 11,
+    "description": "Create column keywords_facet at index 11 based on column keywords using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "keywords",
+    "description": "Remove column keywords"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "keywords_facet",
+    "newColumnName": "keywords",
+    "description": "Rename column keywords_facet to keywords"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "language",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column language using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "language",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column language using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "language",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column language using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "keywords",
+    "description": "Remove column keywords"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "language",
+    "description": "Remove column language"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "location",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "location_facet",
+    "columnInsertIndex": 12,
+    "description": "Create column location_facet at index 12 based on column location using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "location",
+    "description": "Remove column location"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "location_facet",
+    "newColumnName": "location",
+    "description": "Rename column location_facet to location"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "location_type",
+    "description": "Remove column location_type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "currency",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "currency_facet",
+    "columnInsertIndex": 13,
+    "description": "Create column currency_facet at index 13 based on column currency using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "currency",
+    "description": "Remove column currency"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "currency_facet",
+    "newColumnName": "currency",
+    "description": "Rename column currency_facet to currency"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency_symbol",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency_symbol using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency_symbol",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency_symbol using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "currency_symbol",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column currency_symbol using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "status",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column status using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "status",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column status using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "status",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column status using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dish_count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column dish_count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column occasion using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column occasion using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column occasion using expression value.toUppercase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "occasion",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "occasion_facet",
+    "columnInsertIndex": 8,
+    "description": "Create column occasion_facet at index 8 based on column occasion using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion_facet",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "COMPL.",
+          "[COMPL?];",
+          "COMPL?;",
+          "[COMPL];",
+          "COMPL (?);",
+          "COMPL(?);",
+          "COMPL;(?)",
+          "[COMPL.]",
+          "[COMPL]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COMPL"
+      },
+      {
+        "from": [
+          "OTHER (SOC);",
+          "OTHER (SOC?);",
+          "OTHER (SOC?)",
+          "OTHER (SOC)",
+          "OTHER [SOC?];",
+          "OTHER (SOC.)",
+          "OTHER )SOC);",
+          "OTHER [SOC]",
+          "OTHER, [SOC?];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (SOC)"
+      },
+      {
+        "from": [
+          "ANNIVERSARY;",
+          "ANNIVERSARY (?);",
+          "ANNIVERSARY(?);",
+          "ANNIVERSARY",
+          "ANNIVERSARY.",
+          "ANNIVERSARY?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNIVERSARY"
+      },
+      {
+        "from": [
+          "SECULAR HOLIDAY;",
+          "SECULAR HOLIDAY",
+          "SECULAR HOLIDAY. HOLIDAY",
+          "SECULAR HOLIDAY. HOLIDAY;",
+          "SECULAR HOLIDAY HOLIDAY;",
+          "SECULAR HOLIDAY HOLIDAY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SECULAR HOLIDAY"
+      },
+      {
+        "from": [
+          "OTHER (ANNIVERSARY);",
+          "OTHER (ANNIVERSARY)",
+          "OTHER (ANNIVERSARY?)",
+          "OTHER - ANNIVERSARY",
+          "OTHER {ANNIVERSARY};"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (ANNIVERSARY)"
+      },
+      {
+        "from": [
+          "[ANNIV?];",
+          "(ANNIV);",
+          "(ANNIV?);",
+          "[?ANNIV?];",
+          "[ANNIV?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNIV"
+      },
+      {
+        "from": [
+          "SOC;",
+          "[SOC?]",
+          "(SOC?)",
+          "[SOC]",
+          "(SOC);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOC"
+      },
+      {
+        "from": [
+          "OTHER (MEETING);",
+          "OTHER (MEETING)",
+          "OTHER (MEETING?);",
+          "OTHER (MEETING?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (MEETING)"
+      },
+      {
+        "from": [
+          "OTHER (SOCIAL?)",
+          "OTHER (SOCIAL);",
+          "OTHER (SOCIAL?);",
+          "OTHER [SOCIAL];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (SOCIAL)"
+      },
+      {
+        "from": [
+          "OTHER (ANNUAL EVENT)",
+          "OTHER (ANNUAL EVENT);",
+          "OTHER {ANNUAL EVENT};",
+          "OTHER, ANNUAL EVENT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (ANNUAL EVENT)"
+      },
+      {
+        "from": [
+          "PATRIOTIC HOLIDAY;",
+          "PATRIOTIC HOLIDAY",
+          "PATRIOTIC HOLIDAY.",
+          "PATRIOTIC HOLIDAY. HOLIDAY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PATRIOTIC HOLIDAY"
+      },
+      {
+        "from": [
+          "RITE;",
+          "RITE",
+          "(RITE)",
+          "(RITE);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RITE"
+      },
+      {
+        "from": [
+          "OTHER (COMMEMORATIVE);",
+          "OTHER (COMMEMORATIVE)",
+          "OTHER (COMMEMORATIVE?)",
+          "OTHER [COMMEMORATIVE]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (COMMEMORATIVE)"
+      },
+      {
+        "from": [
+          "DAILY;",
+          "DAILY",
+          "[DAILY]",
+          "DAILY?;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY"
+      },
+      {
+        "from": [
+          "?",
+          ";",
+          "[?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "?"
+      },
+      {
+        "from": [
+          "ANNUAL",
+          "ANNUAL;",
+          "[ANNUAL]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNUAL"
+      },
+      {
+        "from": [
+          "SECULAR HOLIDAY.HOLIDAY",
+          "SECULAR HOLIDAY.HOLIDAY;",
+          "SECULAR HOLIDAY;HOLIDAY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SECULAR HOLIDAY"
+      },
+      {
+        "from": [
+          "DAILY MENU;",
+          "DAILY MENU",
+          "(DAILY MENU)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY MENU"
+      },
+      {
+        "from": [
+          "OTHER (ANNIV)",
+          "OTHER (ANNIV);",
+          "OTHER (ANNIV?)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (ANNIV)"
+      },
+      {
+        "from": [
+          "OTHER",
+          "OTHER;",
+          "OTHER,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER"
+      },
+      {
+        "from": [
+          "RELIG. HOLIDAY",
+          "RELIG. HOLIDAY;",
+          "RELIG HOLIDAY;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RELIG HOLIDAY"
+      },
+      {
+        "from": [
+          "(SOCIAL)",
+          "(SOCIAL?)",
+          "SOCIAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOCIAL"
+      },
+      {
+        "from": [
+          "[?REUNION?];",
+          "[RE-UNION]",
+          "[REUNION]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "REUNION"
+      },
+      {
+        "from": [
+          "ANNUAL EVENT",
+          "ANNUAL EVENT;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNUAL EVENT"
+      },
+      {
+        "from": [
+          "ANIV;",
+          "[ANIV?];"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANIV"
+      },
+      {
+        "from": [
+          "OTHER (REUNION);",
+          "(OTHER - REUNION?);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (REUNION)"
+      },
+      {
+        "from": [
+          "OTHER (DAILY DATED MENU);",
+          "OTHER (DATED DAILY MENU);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (DAILY DATED MENU)"
+      },
+      {
+        "from": [
+          "POL;",
+          "[POL?]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POL"
+      },
+      {
+        "from": [
+          "OTHER (DAILY MENU);",
+          "OTHER (DAILY MENU)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (DAILY MENU)"
+      },
+      {
+        "from": [
+          "SATURDAY DINNER",
+          "SATURDAY DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SATURDAY DINNER"
+      },
+      {
+        "from": [
+          "NATIONAL EVENT",
+          "NATIONAL EVENT;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NATIONAL EVENT"
+      },
+      {
+        "from": [
+          "PAT;",
+          "PAT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAT"
+      },
+      {
+        "from": [
+          "OTHER (COMMEMOATIVE)",
+          "OTHER (COMMEMOATIVE);"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (COMMEMOATIVE)"
+      },
+      {
+        "from": [
+          "DAILY MEAL",
+          "DAILY MEAL;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY MEAL"
+      },
+      {
+        "from": [
+          "DINNER",
+          "DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DINNER"
+      },
+      {
+        "from": [
+          "SUNDAY DINNER",
+          "SUNDAY DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUNDAY DINNER"
+      },
+      {
+        "from": [
+          "ETHNIC HOLIDAY",
+          "[ETHNIC HOLIDAY]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ETHNIC HOLIDAY"
+      },
+      {
+        "from": [
+          "SUNDAY",
+          "SUNDAY;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUNDAY"
+      },
+      {
+        "from": [
+          "BREAKFAST",
+          "BREAKFAST;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BREAKFAST"
+      },
+      {
+        "from": [
+          "OTHER (ANNUAL MEETING);",
+          "OTHER {ANNUAL MEETING};"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (ANNUAL MEETING)"
+      },
+      {
+        "from": [
+          "BANQUET;",
+          "BANQUET"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BANQUET"
+      },
+      {
+        "from": [
+          "ETH;",
+          "ETH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ETH"
+      },
+      {
+        "from": [
+          "ANNIVERSARYERSARY",
+          "ANNIVERSARYERSARY;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNIVERSARY "
+      },
+      {
+        "from": [
+          "OTHER (DAILY);",
+          "OTHER (DAILY)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OTHER (DAILY)"
+      },
+      {
+        "from": [
+          "DAILY DINNER",
+          "DAILY DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAILY DINNER"
+      },
+      {
+        "from": [
+          "SEMI-ANNUAL",
+          "SEMI-ANNUAL;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SEMI-ANNUAL"
+      },
+      {
+        "from": [
+          "ANNUAL DINNER",
+          "ANNUAL DINNER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNUAL DINNER"
+      }
+    ],
+    "description": "Mass edit cells in column occasion_facet"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion_facet",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ANNIVERSARY",
+          "ANNIVERSARY "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANNIVERSARY"
+      }
+    ],
+    "description": "Mass edit cells in column occasion_facet"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "occasion_facet",
+          "expression": "grel:value.replace(/^\\[(.+)\\]$/,'$1')\n.replace(/[,;]$/, ' ')\n.replace(/\\?/,' ')\n.replace(/\\'/,' ')\n.replace(/\\)/,' ')\n.replace(/\\(/,' ')\n.replace(/\\\"/,' ' )\n.replace(/\\*/,' ' )",
+          "columnName": "occasion_facet",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "EASTER ",
+                "l": "EASTER "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "occasion_facet",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "EASTER;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EASTER"
+      }
+    ],
+    "description": "Mass edit cells in column occasion_facet"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "occasion",
+    "description": "Remove column occasion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "occasion_facet",
+    "newColumnName": "occasion",
+    "description": "Rename column occasion_facet to occasion"
+  },
+  {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column place using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value.replace(/\\s+/,' ')",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column place using expression value.replace(/\\s+/,' ')"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column place using expression value.trim()"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "DELMONICO'S NY",
+            "DELMONICO'S [NY]",
+            "DELMONICO'S [NY?]",
+            "DELMONICO'S, NY",
+            "DELMONICO'S, N.Y.",
+            "DELMONICO'S, NY;",
+            "DELMONICO'S, [NY]",
+            "DELMONICOS NY",
+            "DELMONICOS', NY",
+            "DELMONICOS, (NY)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "DELMONICO'S, NEW YORK, NY",
+            "DELMONICO'S, [NEW YORK, N.Y.]",
+            "DELMONICOS, [NEW YORK, N.Y.]",
+            "DELMONICO'S, (NEW YORK, NY?)",
+            "DELMONICO'S, [NEW YORK, NY]",
+            "DELMONICO'S, [NEW YORK, NY];",
+            "DELMONICO'S. NEW YORK, NY",
+            "DELMONICOS, (NEW YORK, NY?)",
+            "DELMONICOS, NEW YORK, NY",
+            "[DELMONICO'S], NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "NEW YORK, NY",
+            "NEW YORK, [NY]",
+            "[NEW YORK, NY]",
+            "[NEW YORK, NY?]",
+            "(NEW YORK, NY?)",
+            "NEW YORK, [NY];",
+            "NEW YORK [NY]",
+            "NEW YORK, NY [?]",
+            "[New York, NY]",
+            "[NEW YORK, NY];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK, NY"
+        },
+        {
+          "from": [
+            "NEW YORK",
+            "[NEW YORK]",
+            "(NEW YORK?)",
+            "NEW YORK;",
+            "\"NEW YORK\"",
+            "(NEW YORK)",
+            "NEW YORK (?)",
+            "NEW YORK(?)",
+            "NEW YORK?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK, NY"
+        },
+        {
+          "from": [
+            "AUDITORIUM HOTEL [CHICAGO, IL]",
+            "AUDITORIUM HOTEL, CHICAGO, IL",
+            "AUDITORIUM HOTEL , CHICAGO, IL",
+            "AUDITORIUM HOTEL [CHICAGO IL]",
+            "AUDITORIUM HOTEL, (?CHICAGO, IL?)",
+            "AUDITORIUM HOTEL, (CHICAGO, IL?)",
+            "AUDITORIUM HOTEL, CHICAGO [IL]",
+            "AUDITORIUM HOTEL, CHICAGO, [IL]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AUDITORIUM HOTEL, CHICAGO, IL"
+        },
+        {
+          "from": [
+            "EN ROUTE \"FRIEDRICH DER GROSSE\"",
+            "EN ROUTE - \"FRIEDRICH DER GROSSE\"",
+            "EN ROUTE \" FRIEDRICH DER GROSSE\"",
+            "EN ROUTE \"FRIEDRICH DER GROSSE \"",
+            "EN ROUTE 'FRIEDRICH DER GROSSE\"",
+            "EN ROUTE - 'FRIEDRICH DER GROSSE \"",
+            "EN ROUTE - :FRIEDRICH DER GROSSE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE \"FRIEDRICH DER GROSSE\""
+        },
+        {
+          "from": [
+            "PHILADELPHIA, PA",
+            "PHILADELPHIA [PA]",
+            "[PHILADELPHIA, PA]",
+            "PHILADELPHIA, PA.",
+            "PHILADELPHIA, [PA]",
+            "PHILADELPHIA. PA",
+            "[PHILADELPHIA, PA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PHILADELPHIA, PA"
+        },
+        {
+          "from": [
+            "CHICAGO, IL",
+            "CHICAGO, [IL]",
+            "[CHICAGO, IL]",
+            "CHICAGO IL",
+            "CHICAGO [IL]",
+            "[CHICAGO IL?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHICAGO, IL"
+        },
+        {
+          "from": [
+            "PROVIDENCE, RI",
+            "PROVIDENCE, R.I.",
+            "PROVIDENCE RI",
+            "[PROVIDENCE RI?]",
+            "[PROVIDENCE, R.I.]",
+            "[PROVIDENCE, RI?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PROVIDENCE, RI"
+        },
+        {
+          "from": [
+            "SHERRY'S [NY]",
+            "SHERRY'S NY",
+            "SHERRY'S, NY",
+            "SHERRY'S (NY?)",
+            "SHERRYS, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SHERRY'S NY"
+        },
+        {
+          "from": [
+            "OLD POINT COMFORT, VA",
+            "OLD POINT COMFORT VA",
+            "OLD POINT COMFORT, VA.",
+            "OLD POINT, COMFORT, VA",
+            "[OLD POINT COMFORT, VA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OLD POINT COMFORT, VA"
+        },
+        {
+          "from": [
+            "HOTEL BRUNSWICK NY",
+            "BRUNSWICK HOTEL [NY?]",
+            "HOTEL BRUNSWICK [NY?]",
+            "HOTEL BRUNSWICK, NY",
+            "HOTEL BRUNSWICK; NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL BRUNSWICK, NY"
+        },
+        {
+          "from": [
+            "HOTEL MANHATTAN, NY",
+            "HOTEL MANHATTAN [NY]",
+            "MANHATTAN HOTEL NY",
+            "MANHATTAN HOTEL, NY",
+            "HOTEL MANHATTAN, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANHATTAN HOTEL, NY"
+        },
+        {
+          "from": [
+            "DELMONICO'S,NY",
+            "DELMONICO'S,[NY]",
+            "DELMONICO'S[NY]",
+            "DELMONICO'S,(NY?)",
+            "DELMONICOS,[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "SS FRIESLAND",
+            "S.S. FRIESLAND",
+            "SS. FRIESLAND",
+            "S.S. \"FRIESLAND\"",
+            "SS; \"FRIESLAND\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS FRIESLAND"
+        },
+        {
+          "from": [
+            "DELMONICO'S [NEW YORK]",
+            "DELMONICO'S, [NEW YORK]",
+            "DELMONICO'S, NEW YORK",
+            "DELMONICO'S,( NEW YORK)",
+            "DELMONICOS, NEW YORK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "NY",
+            "[NY]",
+            "(NY)",
+            "(N.Y.)",
+            "(NY?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK, NY"
+        },
+        {
+          "from": [
+            "THE AUDITORIUM [CHICAGO, IL]",
+            "THE AUDITORIUM, CHICAGO, IL",
+            "AUDITORIUM, THE, CHICAGO, IL",
+            "THE AUDITORIUM CHICAGO IL",
+            "THE AUDITORIUM, [CHICAGO, IL]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE AUDITORIUM CHICAGO IL"
+        },
+        {
+          "from": [
+            "GRAND HOTEL, CINCINNATI OH",
+            "GRAND HOTEL, CINCINNATI OH;",
+            "GRAND HOTEL, CINCINNATI [OH]",
+            "GRAND HOTEL, CINCINNATI, OH",
+            "GRAND HOTEL, [CINCINNATI, OH]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GRAND HOTEL, CINCINNATI OH"
+        },
+        {
+          "from": [
+            "[SAN FRANCISCO,CA]",
+            "SAN FRANCISCO,CA;",
+            "SAN FRANCISCO,[CA?]",
+            "SAN FRANCISCO,CA",
+            "SAN FRANCISCO,CA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SAN FRANCISCO,CA"
+        },
+        {
+          "from": [
+            "THE NEW WILLARD, WASHINGTON, DC",
+            "NEW WILLARD, THE, WASHINGTON, DC",
+            "THE NEW WILLARD [WASHINGTON, DC",
+            "THE NEW WILLARD, WASHINGTON DC",
+            "THE NEW WILLARD, WASHINGTON, D.C."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE NEW WILLARD, WASHINGTON, DC"
+        },
+        {
+          "from": [
+            "EN ROUTE - SS \"LAHN\"",
+            "EN ROUTE - \"SS LAHN\"",
+            "EN ROUTE \"SS LAHN\"",
+            "EN ROUTE -SS \"LAHN\"",
+            "EN ROUTE _ SS \"LAHN\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE - SS \"LAHN\""
+        },
+        {
+          "from": [
+            "BUFFALO, NY",
+            "(BUFFALO, NY?)",
+            "BUFFALO NY(?)",
+            "[BUFFALO, NY",
+            "[BUFFALO, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BUFFALO, NY"
+        },
+        {
+          "from": [
+            "PARIS, FRANCE",
+            "PARIS, FRANCE(?)",
+            "PARIS, [FRANCE]",
+            "[PARIS, FRANCE?]",
+            "[PARIS, FRANCE]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARIS, FRANCE"
+        },
+        {
+          "from": [
+            "HOTEL SAVOY [NEW YORK]",
+            "HOTEL SAVOY, NEW YORK",
+            "HOTEL SAVOY, [NEW YORK]",
+            "HOTEL SAVOY; NEW YORK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL SAVOY [NEW YORK]"
+        },
+        {
+          "from": [
+            "NEW YORK,NY",
+            "(NEW YORK,NY)",
+            "[NEW YORK,NY]",
+            "NEW YORK,[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK,NY"
+        },
+        {
+          "from": [
+            "EN ROUTE S.S.\"BARBAROSSA\"",
+            "EN ROUTE - S.S.BARBAROSSA",
+            "EN ROUTE; S.S.BARBAROSSA",
+            "EN ROUTE; S.S.BARBAROSSA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE; S.S.BARBAROSSA"
+        },
+        {
+          "from": [
+            "BROOKLYN,NY",
+            "BROOKLYN,NY(?)",
+            "BROOKLYN[NY]",
+            "[BROOKLYN,NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BROOKLYN,NY"
+        },
+        {
+          "from": [
+            "QUEBEC, CANADA",
+            "QUEBEC [CANADA]",
+            "QUEBEC,[ CANADA]",
+            "QUEBEC, [CANADA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "QUEBEC, CANADA"
+        },
+        {
+          "from": [
+            "QUEEN CITY CLUB, [CINCINNATI, OH]",
+            "QUEEN CITY CLUB (CINCINNATI OH?)",
+            "QUEEN CITY CLUB CINCINNATI OH",
+            "QUEEN CITY CLUB, CINCINNATI, OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "QUEEN CITY CLUB, [CINCINNATI, OH]"
+        },
+        {
+          "from": [
+            "SS CITY OF RIO DE JANEIRO",
+            "S.S. \"CITY OF RIO DE JANEIRO\"",
+            "[SS CITY OF RIO DE JANEIRO?]",
+            "[SS CITY OF RIO DE JANEIRO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS CITY OF RIO DE JANEIRO"
+        },
+        {
+          "from": [
+            "AT SEA",
+            "[AT SEA ?]",
+            "(AT SEA)",
+            "[AT SEA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AT SEA"
+        },
+        {
+          "from": [
+            "DETROIT, MI",
+            "(DETROIT, MI?)",
+            "DETROIT, [MI]",
+            "[DETROIT, MI]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DETROIT, MI"
+        },
+        {
+          "from": [
+            "WASHINGTON,D.C.",
+            "WASHINGTON,DC",
+            "WASHINGTON,[D.C.]",
+            "[WASHINGTON,DC]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WASHINGTON,D.C."
+        },
+        {
+          "from": [
+            "MARLBOROUGH HOTEL, (?)",
+            "HOTEL MARLBOROUGH",
+            "HOTEL MARLBOROUGH, (?)",
+            "MARLBOROUGH HOTEL, [?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MARLBOROUGH"
+        },
+        {
+          "from": [
+            "CHICAGO,ILL.",
+            "CHICAGO,ILL;",
+            "CHICAGO,ILL",
+            "[CHICAGO,ILL]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHICAGO,ILL."
+        },
+        {
+          "from": [
+            "PHILADELPHIA,PA.",
+            "PHILADELPHIA,PA",
+            "PHILADELPHIA,[PA]",
+            "[PHILADELPHIA,PA.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PHILADELPHIA,PA."
+        },
+        {
+          "from": [
+            "BELLEVUE-STRATFORD HOTEL, PHILADELPHIA, PA",
+            "HOTEL BELLEVUE-STRATFORD [PHILADELPHIA, PA]",
+            "HOTEL BELLEVUE-STRATFORD, PHILADELPHIA, PA",
+            "HOTEL BELLEVUE-STRATFORD, [PHILADELPHIA, PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BELLEVUE-STRATFORD HOTEL, PHILADELPHIA, PA"
+        },
+        {
+          "from": [
+            "RMS CAMPANIA",
+            "R.M.S. CAMPANIA",
+            "R.M.S. \"CAMPANIA\"",
+            "R.M.S. \" CAMPANIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RMS CAMPANIA"
+        },
+        {
+          "from": [
+            "SAN FRANCISCO, CA",
+            "(SAN FRANCISCO, CA?)",
+            "SAN FRANCISCO, CA;",
+            "[SAN FRANCISCO, CA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SAN FRANCISCO, CA"
+        },
+        {
+          "from": [
+            "ATLANTIC CITY, NJ",
+            "ATLANTIC CITY, N.J.",
+            "ATLANTIC CITY, NJ;",
+            "[ATLANTIC CITY, NJ]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ATLANTIC CITY, NJ"
+        },
+        {
+          "from": [
+            "ROME, ITALY",
+            "ROME [ITALY]",
+            "ROME ITALY",
+            "[ROME, ITALY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROME, ITALY"
+        },
+        {
+          "from": [
+            "HOTEL VENDOME, BOSTON, MA",
+            "HOTEL VENDOME, [BOSTON, MA];",
+            "HOTEL VENDOME; BOSTON, MA",
+            "VENDOME HOTEL, BOSTON, MA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL VENDOME, BOSTON, MA"
+        },
+        {
+          "from": [
+            "NASSAU,N.P.BAHAMAS",
+            "NASSAU,NP,BAHAMAS",
+            "NASSAU,NP;BAHAMAS",
+            "[NASSAU,N.P.,BAHAMAS]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASSAU,N.P.BAHAMAS"
+        },
+        {
+          "from": [
+            "[LONDON,ENGLAND]",
+            "LONDON,[ENGLAND]",
+            "LONDON,ENGLAND",
+            "[LONDON,ENGLAND ?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "[LONDON,ENGLAND]"
+        },
+        {
+          "from": [
+            "NEW ALGONQUIN CLUB, BOSTON, MA",
+            "NEW ALGONQUIN CLUB [BOSTON, MA]",
+            "NEW ALGONQUIN CLUB, (BOSTON, MA?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW ALGONQUIN CLUB, BOSTON, MA"
+        },
+        {
+          "from": [
+            "KONIGIN LUISE",
+            "\"KONIGIN LUISE\"",
+            "KONIGIN LUISE;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "KONIGIN LUISE"
+        },
+        {
+          "from": [
+            "HOTEL PFISTER, MILWAUKEE, WI",
+            "HOTEL PFISTER, MILWAUKEE WI",
+            "PFISTER HOTEL, MILWAUKEE, WI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL PFISTER, MILWAUKEE, WI"
+        },
+        {
+          "from": [
+            "SS: KAMAKURA MARU",
+            "SS: \"KAMAKURA MARU\"",
+            "SS; KAMAKURA MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS: KAMAKURA MARU"
+        },
+        {
+          "from": [
+            "66 ST. & B'WAY NY",
+            "66 ST. & B'WAY. NY",
+            "66 ST. & BWAY. NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "66 ST. & B'WAY NY"
+        },
+        {
+          "from": [
+            "NEW YORK CITY",
+            "[NEW YORK CITY]",
+            "[?NEW YORK CITY?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK CITY"
+        },
+        {
+          "from": [
+            "R.M.S. \"EMPRESS OF CHINA\"",
+            "RMS EMPRESS OF CHINA",
+            "R.M.S. EMPRESS OF CHINA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. \"EMPRESS OF CHINA\""
+        },
+        {
+          "from": [
+            "LOS ANGELES,CA",
+            "LOS ANGELES,CA;",
+            "LOS ANGELES,[CA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LOS ANGELES,CA"
+        },
+        {
+          "from": [
+            "SS WESTERNLAND",
+            "S.S. WESTERNLAND",
+            "S.S. \"WESTERNLAND\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS WESTERNLAND"
+        },
+        {
+          "from": [
+            "WASHINGTON, DC",
+            "WASHINGTON, D.C.",
+            "WASHINGTON DC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WASHINGTON, DC"
+        },
+        {
+          "from": [
+            "LONG BEACH,L.I.,NY;",
+            "LONG BEACH,L.I.,[NY&]",
+            "LONG BEACH,LI,[NY?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LONG BEACH,L.I.,NY;"
+        },
+        {
+          "from": [
+            "(CHICAGO, ILL)",
+            "CHICAGO ,ILL",
+            "CHICAGO, ILL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "(CHICAGO, ILL)"
+        },
+        {
+          "from": [
+            "(CHICAGO,IL)",
+            "CHICAGO,IL.",
+            "CHICAGO,[IL]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "(CHICAGO,IL)"
+        },
+        {
+          "from": [
+            "HOTEL SAVOY, NY",
+            "HOTEL SAVOY NY",
+            "HOTEL SAVOY, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL SAVOY, NY"
+        },
+        {
+          "from": [
+            "DETROIT,MI",
+            "(DETROIT,MI?)",
+            "DETROIT,[MI?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DETROIT,MI"
+        },
+        {
+          "from": [
+            "THE WALDORF, NEW YORK, NY",
+            "THE WALDORF, [?NEW YORK, NY]",
+            "THE WALDORF, [NEW YORK, NY?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE WALDORF, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "MONTREAL [CANADA?]",
+            "MONTREAL, CANADA",
+            "MONTREAL, [CANADA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MONTREAL [CANADA?]"
+        },
+        {
+          "from": [
+            "NASSAU, N.P. BAHAMAS",
+            "NASSAU, N.P., BAHAMAS",
+            "[NASSAU, N.P., BAHAMAS]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASSAU, N.P. BAHAMAS"
+        },
+        {
+          "from": [
+            "MANHATTAN HOTEL, NEW YORK, NY",
+            "HOTEL MANHATTAN, NEW YORK, [NY];",
+            "HOTEL MANHATTAN, [NEW YORK, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANHATTAN HOTEL, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "COMMERCIAL CLUB, PORTLAND, OR",
+            "COMMERCIAL CLUB, [PORTLAND, OR]",
+            "PORTLAND COMMERCIAL CLUB, PORTLAND, OR"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COMMERCIAL CLUB, PORTLAND, OR"
+        },
+        {
+          "from": [
+            "BOSTON, MA",
+            "BOSTON MA",
+            "BOSTON; MA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BOSTON, MA"
+        },
+        {
+          "from": [
+            "DELMONICO'S, NEW YORK CITY",
+            "NEW YORK CITY, DELMONICO'S",
+            "NEW YORK CITY; DELMONICO'S"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "LAKEWOOD, NJ",
+            "LAKEWOOD NJ",
+            "LAKEWOOD, N.J."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LAKEWOOD, NJ"
+        },
+        {
+          "from": [
+            "MERCANTILE CLUB (ST LOUIS, MO)",
+            "MERCANTILE CLUB, ST LOUIS [MO]",
+            "MERCANTILE CLUB, ST. LOUIS, MO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MERCANTILE CLUB (ST LOUIS, MO)"
+        },
+        {
+          "from": [
+            "BOSTON,MASS",
+            "BOSTON,MASS;",
+            "(BOSTON,MASS)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BOSTON,MASS"
+        },
+        {
+          "from": [
+            "COPENHAGEN, DENMARK",
+            "[COPENHAGEN DENMARK?]",
+            "[COPENHAGEN, DENMARK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COPENHAGEN, DENMARK"
+        },
+        {
+          "from": [
+            "SS RIO DE JANEIRO",
+            "SS: RIO DE JANEIRO",
+            "SS; RIO DE JANEIRO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS RIO DE JANEIRO"
+        },
+        {
+          "from": [
+            "LONG BEACH, L.I, NY",
+            "LONG BEACH, LI, [NY];",
+            "LONG BEACH, L.I., NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LONG BEACH, L.I, NY"
+        },
+        {
+          "from": [
+            "HOTEL SOMERSET, BOSTON, MA",
+            "HOTEL SOMERSET, BOSTON, [MA]",
+            "HOTEL SOMERSET, [BOSTON, MA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL SOMERSET, BOSTON, MA"
+        },
+        {
+          "from": [
+            "NEW TONTINE HOTEL, NEW HAVEN [CT]",
+            "TONTINE HOTEL, NEW HAVEN, CT",
+            "TONTINE HOTEL, [NEW HAVEN, CT]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW TONTINE HOTEL, NEW HAVEN [CT]"
+        },
+        {
+          "from": [
+            "HOTEL SAVOY",
+            "SAVOY HOTEL",
+            "SAVOY HOTEL, (?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL SAVOY"
+        },
+        {
+          "from": [
+            "SS COPTIC",
+            "S.S. \"COPTIC\"",
+            "S.S. COPTIC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS COPTIC"
+        },
+        {
+          "from": [
+            "ADELAIDE [AUSTRALIA?]",
+            "ADELAIDE, AUSTRALIA",
+            "[ADELAIDE, AUSTRALIA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ADELAIDE [AUSTRALIA?]"
+        },
+        {
+          "from": [
+            "ST. LOUIS, MO",
+            "ST. LOUIS, [MO];",
+            "ST. LOUIS [MO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. LOUIS, MO"
+        },
+        {
+          "from": [
+            "ZERMATT, [SWITZERLAND]",
+            "(ZERMATT, SWITZERLAND?)",
+            "ZERMATT [SWITZERLAND]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ZERMATT, [SWITZERLAND]"
+        },
+        {
+          "from": [
+            "BELLEVUE-STRATFORD, (PHILADELPHIA, PA?)",
+            "BELLEVUE-STRATFORD, PHILADELPHIA, PA",
+            "BELLEVUE-STRATFORD, [PHILADELPHIA, PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BELLEVUE-STRATFORD, (PHILADELPHIA, PA?)"
+        },
+        {
+          "from": [
+            "SARATOGA SPRINGS, NY",
+            "SARATOGA SPRINGS, NY.",
+            "SARATOGA SPRINGS, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SARATOGA SPRINGS, NY"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA, NEW YORK",
+            "WALDORF-ASTORIA [NEW YORK]",
+            "WALDORF-ASTORIA, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA, NEW YORK"
+        },
+        {
+          "from": [
+            "R.M.S. \"ETRURIA\"",
+            "R.M.S. ETRURIA",
+            "RMS ETRURIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. \"ETRURIA\""
+        },
+        {
+          "from": [
+            "ST. DENIS HOTEL",
+            "HOTEL ST. DENIS",
+            "ST. DENIS HOTEL, (?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. DENIS HOTEL"
+        },
+        {
+          "from": [
+            "THE HOLLENDEN [CLEVELAND OH?]",
+            "THE HOLLENDEN, CLEVELAND, OH",
+            "THE HOLLENDEN, CLEVELAND; OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE HOLLENDEN, CLEVELAND, OH"
+        },
+        {
+          "from": [
+            "SS CITY OF PARA",
+            "S.S. \"CITY OF PARA\"",
+            "S.S. \"CITY OF PARA'"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS CITY OF PARA"
+        },
+        {
+          "from": [
+            "YOUNG'S HOTEL, BOSTON, MA",
+            "YOUNG\"S HOTEL, BOSTON, MA",
+            "YOUNG'S HOTEL, [BOSTON MA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "YOUNG'S HOTEL, BOSTON, MA"
+        },
+        {
+          "from": [
+            "SS DORIC",
+            "SS DORIC;",
+            "S.S. \"DORIC\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS DORIC"
+        },
+        {
+          "from": [
+            "HOTEL MAJESTIC [PHILADELPHIA, PA]",
+            "HOTEL MAJESTIC, PHILADELPHIA, PA",
+            "MAJESTIC HOTEL, PHILADELPHIA. PA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MAJESTIC [PHILADELPHIA, PA]"
+        },
+        {
+          "from": [
+            "DELMONICO'S,[NEW YORK]",
+            "DELMONICOS,[NEW YORK]",
+            "(DELMONICO'S.NEW YORK)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,New York, NY"
+        },
+        {
+          "from": [
+            "BERGEN, NORWAY",
+            "(BERGEN, NORWAY)",
+            "[BERGEN, NORWAY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BERGEN, NORWAY"
+        },
+        {
+          "from": [
+            "BROOKLYN, NY",
+            "[BROOKLYN, NY]",
+            "BROOKLYN NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BROOKLYN, NY"
+        },
+        {
+          "from": [
+            "BRUNSWICK HOTEL, BOSTON, MA",
+            "HOTEL BRUNSWICK, BOSTON, MA",
+            "HOTEL BRUNSWICK, BOSTON [MA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BRUNSWICK HOTEL, BOSTON, MA"
+        },
+        {
+          "from": [
+            "DINING CAR",
+            "Dining Car",
+            "DINING CAR;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DINING CAR"
+        },
+        {
+          "from": [
+            "R.M.S. \"LUCANIA\"",
+            "RMS LUCANIA",
+            "R.M.S. LUCANIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. \"LUCANIA\""
+        },
+        {
+          "from": [
+            "HOTEL MARLBOROUGH, NEW YORK, NY",
+            "HOTEL MARLBOROUGH, [NEW YORK, NY]",
+            "MARLBOROUGH HOTEL, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MARLBOROUGH, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "66TH ST AND BROADWAY,NEW YORK,NY",
+            "66TH ST. AND BROADWAY;NEW YORK,NY",
+            "[66TH ST AND BROADWAY,NEW YORK,NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "66TH ST AND BROADWAY,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "CLINTON COUNTY, NY",
+            "CLINTON COUNTY NY",
+            "CLINTON COUNTY, NY."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLINTON COUNTY, NY"
+        },
+        {
+          "from": [
+            "SS KASUGA",
+            "S.S. KASUGA",
+            "SS: KASUGA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS KASUGA"
+        },
+        {
+          "from": [
+            "CLEVELAND, OH",
+            "[CLEVELAND, OH]",
+            "CLEVELAND [OH]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLEVELAND, OH"
+        },
+        {
+          "from": [
+            "THE ARLINGTON, WASHINGTON, D.C.",
+            "THE ARLINGTON (WASHINGTON DC?)",
+            "THE ARLINGTON, WASHINGTON, DC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE ARLINGTON, WASHINGTON, D.C."
+        },
+        {
+          "from": [
+            "?",
+            "[?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "?"
+        },
+        {
+          "from": [
+            "JACKSONVILLE, FL",
+            "JACKSONVILLE, FL;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JACKSONVILLE, FL"
+        },
+        {
+          "from": [
+            "ASTOR HOTEL, NEW YORK, NY",
+            "HOTEL ASTOR, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASTOR HOTEL, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "ABOARD SS KAMAKURA MARU",
+            "ABOARD SS KAMAKURA MARU;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD SS KAMAKURA MARU"
+        },
+        {
+          "from": [
+            "PARKER HOUSE [BOSTON,MASS ?]",
+            "PARKER HOUSE, BOSTON,MASS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARKER HOUSE [BOSTON,MASS ?]"
+        },
+        {
+          "from": [
+            "ST. CHARLES HOTEL,NEW ORLEANS,LA",
+            "ST. CHARLES HOTEL,NEW ORLEANS,[LA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. CHARLES HOTEL,NEW ORLEANS,LA"
+        },
+        {
+          "from": [
+            "FANEUIL HALL, BOSTON, MA",
+            "FANEUIL HALL, [BOSTON, MA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FANEUIL HALL, BOSTON, MA"
+        },
+        {
+          "from": [
+            "EN ROUTE \"H.H.MEIER\"",
+            "EN ROUTE \" H.H.MEIER\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE \"H.H.MEIER\""
+        },
+        {
+          "from": [
+            "BERLIN, GERMANY",
+            "BERLIN [GERMANY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BERLIN, GERMANY"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA,NY",
+            "WALDORF-ASTORIA,[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA,NY"
+        },
+        {
+          "from": [
+            "PITTSBURGH, PA",
+            "[PITTSBURGH, PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PITTSBURGH, PA"
+        },
+        {
+          "from": [
+            "PARIS,FRANCE",
+            "(PARIS,FRANCE)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARIS,FRANCE"
+        },
+        {
+          "from": [
+            "SAVOY HOTEL, NEW YORK, NY",
+            "HOTEL SAVOY, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SAVOY HOTEL, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "ABOARD R.M.S. \"ETRURIA\"",
+            "ABOARD R.M.S. ETRURIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD R.M.S. \"ETRURIA\""
+        },
+        {
+          "from": [
+            "HAMBURG, GERMANY",
+            "HAMBURG, [GERMANY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAMBURG, GERMANY"
+        },
+        {
+          "from": [
+            "LINCOLN CLUB - NY",
+            "LINCOLN CLUB [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LINCOLN CLUB - NY"
+        },
+        {
+          "from": [
+            "BANGKOK, THAILAND",
+            "BANGKOK, [THAILAND]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BANGKOK, THAILAND"
+        },
+        {
+          "from": [
+            "66TH STREET AND BROADWAY,NEW YORK,NY",
+            "[66TH STREET AND BROADWAY,NEW YORK,NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "66TH STREET AND BROADWAY,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "ST. AUGUSTINE, FLA",
+            "ST. AUGUSTINE, FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. AUGUSTINE, FLA"
+        },
+        {
+          "from": [
+            "NEW HAVEN CT",
+            "NEW HAVEN [CT]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW HAVEN CT"
+        },
+        {
+          "from": [
+            "MELBOURNE,AUSTRALIA",
+            "[MELBOURNE,AUSTRALIA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MELBOURNE,AUSTRALIA"
+        },
+        {
+          "from": [
+            "Gramercy Park Hotel",
+            "Hotel Gramercy Park"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Gramercy Park Hotel"
+        },
+        {
+          "from": [
+            "SHERRY'S, NEW YORK, NY",
+            "SHERRY'S, [NEW YORK, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SHERRY'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "NASSAU, NP",
+            "[NASSAU, N.P.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASSAU, NP"
+        },
+        {
+          "from": [
+            "Unknown",
+            "unknown"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Unknown"
+        },
+        {
+          "from": [
+            "HOFFMAN HOUSE NEW YORK, NY",
+            "HOFFMAN HOUSE, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOFFMAN HOUSE NEW YORK, NY"
+        },
+        {
+          "from": [
+            "Hotel St. Francis",
+            "HOTEL ST. FRANCIS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Hotel St. Francis"
+        },
+        {
+          "from": [
+            "HOTEL JEFFERSON, ST. LOUIS, MO",
+            "JEFFERSON HOTEL, ST. LOUIS [MO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL JEFFERSON, ST. LOUIS, MO"
+        },
+        {
+          "from": [
+            "EN ROUTE",
+            "[EN ROUTE]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT LA PROVENCE",
+            "ABOARD PAQUEBOT \"LA PROVENCE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT LA PROVENCE"
+        },
+        {
+          "from": [
+            "HOTEL STENTON [PHILADELPHIA PA]",
+            "HOTEL STENTON, PHILADELPHIA, PA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL STENTON [PHILADELPHIA PA]"
+        },
+        {
+          "from": [
+            "(ROME,ITALY)",
+            "ROME,ITALY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROME,ITALY"
+        },
+        {
+          "from": [
+            "SS TRINIDAD",
+            "S.S. \"TRINIDAD\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS TRINIDAD"
+        },
+        {
+          "from": [
+            "WHITE MOUNTAINS, NH",
+            "WHITE MOUNTAINS, NH;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WHITE MOUNTAINS, NH"
+        },
+        {
+          "from": [
+            "LIVERPOOL [ENGLAND?}",
+            "LIVERPOOL, [ENGLAND]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LIVERPOOL, ENGLAND"
+        },
+        {
+          "from": [
+            "Fairmont Hotel",
+            "FAIRMONT HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Fairmont Hotel"
+        },
+        {
+          "from": [
+            "FRANKFURT, GERMANY",
+            "[FRANKFURT, GERMANY?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FRANKFURT, GERMANY"
+        },
+        {
+          "from": [
+            "PORTLAND, ME",
+            "PORTLAND ME"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PORTLAND, ME"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT \"LA SAVOIE\"",
+            "ABOARD PAQUEBOT LA SAVOIE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT \"LA SAVOIE\""
+        },
+        {
+          "from": [
+            "THE BELLEVUE-STRATFORD, PHILADELPHIA, PA",
+            "THE BELLEVUE-STRATFORD, [PHILADELPHIA, PA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE BELLEVUE-STRATFORD, PHILADELPHIA, PA"
+        },
+        {
+          "from": [
+            "YOUNG'S HOTEL",
+            "YOUNG'S HOTEL [?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "YOUNG'S HOTEL"
+        },
+        {
+          "from": [
+            "CLEVELAND,OH",
+            "CLEVELAND,[OH?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLEVELAND,OH"
+        },
+        {
+          "from": [
+            "MECHANICS HALL, [BOSTON, MA];",
+            "MECHANICS' HALL, BOSTON, MA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MECHANICS HALL, [BOSTON, MA];"
+        },
+        {
+          "from": [
+            "130 BROADWAY, NEW YORK",
+            "130 BROADWAY, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "130 BROADWAY, NEW YORK"
+        },
+        {
+          "from": [
+            "EAGLE HOTEL (GETTYSBURG, PA?)",
+            "EAGLE HOTEL, GETTYSBURG, PA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EAGLE HOTEL (GETTYSBURG, PA?)"
+        },
+        {
+          "from": [
+            "HOTEL DEL CAMPIDOGLIO, NEW YORK, NY",
+            "HOTEL DEL CAMPIDOGLIO, [NEW YORK, N.Y.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL DEL CAMPIDOGLIO, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "ABOARD SS KASUGA;",
+            "ABOARD SS KASUGA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD SS KASUGA"
+        },
+        {
+          "from": [
+            "(CALIFORNIA?)",
+            "CALIFORNIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CALIFORNIA"
+        },
+        {
+          "from": [
+            "SOUTHERN HOTEL, ST. LOUIS, MO",
+            "SOUTHERN HOTEL, [ST. LOUIS, MO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SOUTHERN HOTEL, ST. LOUIS, MO"
+        },
+        {
+          "from": [
+            "CLINTON COUNTY,NY",
+            "CLINTON COUNTY.NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLINTON COUNTY,NY"
+        },
+        {
+          "from": [
+            "Hotel Gramercy Park; 52 Gramercy Park North",
+            "Gramercy Park Hotel; Hotel Gramercy Park; 52 Gramercy Park North"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Hotel Gramercy Park; 52 Gramercy Park North"
+        },
+        {
+          "from": [
+            "TACOMA, [WA?}",
+            "TACOMA; WA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TACOMA, WA"
+        },
+        {
+          "from": [
+            "THE AUDITORIUM,CHICAGO,ILL;",
+            "THE AUDITORIUM,[CHICAGO,ILL.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE AUDITORIUM,CHICAGO,ILL;"
+        },
+        {
+          "from": [
+            "DELMONICO'S,[NEW YORK,NY?]",
+            "DELMONICO'S,NEW YORK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "ROUND TABLE CLUB",
+            "[ROUND TABLE CLUB]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROUND TABLE CLUB"
+        },
+        {
+          "from": [
+            "Park Lane",
+            "Park lane"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Park Lane"
+        },
+        {
+          "from": [
+            "R.M.S. EMPRESS OF INDIA",
+            "R.M.S. \"EMPRESS OF INDIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. EMPRESS OF INDIA"
+        },
+        {
+          "from": [
+            "BALTIMORE,MD",
+            "BALTIMORE,MD."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BALTIMORE,MD"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA",
+            "Waldorf-Astoria"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS KASUGA MARU",
+            "EN ROUTE ABOARD SS. KASUGA MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS KASUGA MARU"
+        },
+        {
+          "from": [
+            "MAXWELL HOUSE, NASHVILLE, [TN];",
+            "MAXWELL HOUSE, NASHVILLE, TN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MAXWELL HOUSE, NASHVILLE, [TN];"
+        },
+        {
+          "from": [
+            "HOTEL ZINZENDORF, WINSTON-SALEM, NC",
+            "ZINZENDORF HOTEL, WINSTON-SALEM, NC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ZINZENDORF, WINSTON-SALEM, NC"
+        },
+        {
+          "from": [
+            "ORMOND, FL",
+            "ORMOND, FL;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ORMOND, FL"
+        },
+        {
+          "from": [
+            "NASHVILLE, [TN?]",
+            "NASHVILLE, TN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASHVILLE, [TN?]"
+        },
+        {
+          "from": [
+            "CLEVELAND, OHIO",
+            "CLEVELAND. OHIO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLEVELAND, OHIO"
+        },
+        {
+          "from": [
+            "THE TEN EYCK, ALBANY, NY",
+            "TEN EYCK, THE, ALBANY, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE TEN EYCK, ALBANY, NY"
+        },
+        {
+          "from": [
+            "BUTLER, PA",
+            "BUTLER, PA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BUTLER, PA"
+        },
+        {
+          "from": [
+            "HOTEL MAJESTIC",
+            "MAJESTIC HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MAJESTIC"
+        },
+        {
+          "from": [
+            "HOTEL ASTOR",
+            "ASTOR HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ASTOR"
+        },
+        {
+          "from": [
+            "VIRGINIA BEACH, VA",
+            "VIRGINIA BEACH VA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VIRGINIA BEACH, VA"
+        },
+        {
+          "from": [
+            "MANILA, P.I.",
+            "MANILA, PI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANILA, P.I."
+        },
+        {
+          "from": [
+            "BELLEVUE HOTEL, PHILADELPHIA, PA",
+            "HOTEL BELLEVUE, PHILADELPHIA [PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BELLEVUE HOTEL, PHILADELPHIA, PA"
+        },
+        {
+          "from": [
+            "ST. PETERSBURG,[RUSSIA]",
+            "ST. PETERSBURG.RUSSIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. PETERSBURG,[RUSSIA]"
+        },
+        {
+          "from": [
+            "ROANOKE, VA",
+            "ROANOKE, VA;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROANOKE, VA"
+        },
+        {
+          "from": [
+            "HAMBURG,GERMANY",
+            "HAMBURG,[GERMANY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAMBURG,GERMANY"
+        },
+        {
+          "from": [
+            "GRAND PACIFIC HOTEL, CHICAGO, IL",
+            "GRAND PACIFIC HOTEL [CHICAGO, IL];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GRAND PACIFIC HOTEL, CHICAGO, IL"
+        },
+        {
+          "from": [
+            "DELMONICO'S NEW YORK,NY",
+            "DELMONICO'S, [NEW YORK,N.Y.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S NEW YORK,NY"
+        },
+        {
+          "from": [
+            "CINCINNATI,OH",
+            "[CINCINNATI,OH?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CINCINNATI,OH"
+        },
+        {
+          "from": [
+            "CORONADO BEACH, CA",
+            "CORONADO BEACH, CA;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CORONADO BEACH, CA"
+        },
+        {
+          "from": [
+            "TAMPA, FL",
+            "TAMPA FL?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TAMPA, FL"
+        },
+        {
+          "from": [
+            "UNION LEAGUE PHILADELPHIA [PA?]",
+            "UNION LEAGUE, [PHILADELPHIA, PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION LEAGUE PHILADELPHIA [PA?]"
+        },
+        {
+          "from": [
+            "NARRAGANSETT HOTEL, PROVIDENCE RI",
+            "NARRAGANSETT HOTEL, PROVIDENCE, RI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NARRAGANSETT HOTEL, PROVIDENCE RI"
+        },
+        {
+          "from": [
+            "NYC",
+            "[NYC]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NYC"
+        },
+        {
+          "from": [
+            "THE RALEIGH, WASHINGTON, DC",
+            "THE RALEIGH, WASHINGTON DC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE RALEIGH, WASHINGTON, DC"
+        },
+        {
+          "from": [
+            "HORTICULTURAL HALL, PHILADELPHIA, PA",
+            "HORTICULTURAL HALL, PHILADELPHIA [PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HORTICULTURAL HALL, PHILADELPHIA, PA"
+        },
+        {
+          "from": [
+            "AZ",
+            "[AZ]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AZ"
+        },
+        {
+          "from": [
+            "THE WELLINGTON, PROVIDENCE RI",
+            "WELLINGTON, THE, PROVIDENCE, RI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE WELLINGTON, PROVIDENCE RI"
+        },
+        {
+          "from": [
+            "(?FLA?)",
+            "[FLA.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "[FLA.]"
+        },
+        {
+          "from": [
+            "NEW YORK ATHLETIC CLUB",
+            "NEW YORK ATHLETIC CLUB, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK ATHLETIC CLUB"
+        },
+        {
+          "from": [
+            "TAMPA,FLA.",
+            "TAMPA.FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TAMPA,FLA."
+        },
+        {
+          "from": [
+            "BOSTON, MASS.",
+            "BOSTON, MASS;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BOSTON, MASS."
+        },
+        {
+          "from": [
+            "HOTEL ST. GEORGE, NYACK, NY",
+            "ST. GEORGE HOTEL, NYACK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ST. GEORGE, NYACK, NY"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS KOBE MARU",
+            "EN ROUTE ABOARD SS. KOBE MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS KOBE MARU"
+        },
+        {
+          "from": [
+            "PARKER HOUSE,BOSTON,MASS;",
+            "PARKER HOUSE,[BOSTON,MASS]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARKER HOUSE,BOSTON,MASS;"
+        },
+        {
+          "from": [
+            "MELBOURNE, AUSTRALIA",
+            "MELBOURNE [AUSTRALIA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MELBOURNE, AUSTRALIA"
+        },
+        {
+          "from": [
+            "LUCERNE,SWITZERLAND",
+            "[LUCERNE,SWITZERLAND?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LUCERNE,SWITZERLAND"
+        },
+        {
+          "from": [
+            "NOS. 667 TO 677 [BROADWAY], OPPOSITE BOND STREET, MIDWAY BETWEEN BATTERY AND CENTRAL PARK, NEW YORK [NY];",
+            "NOS. 667 TO 677 [BROADWAY], OPPOSITE BOND STREET, MIDWAY BETWEEN BATTERY AND CENTRAL PARK, NEW YORK, [NY];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NOS. 667 TO 677 [BROADWAY], OPPOSITE BOND STREET, MIDWAY BETWEEN BATTERY AND CENTRAL PARK, NEW YORK [NY];"
+        },
+        {
+          "from": [
+            "U.S.M.S. NEW YORK",
+            "USMS NEW YORK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "U.S.M.S. NEW YORK"
+        },
+        {
+          "from": [
+            "DENVER, COLO.",
+            "DENVER, COLO;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DENVER, COLO."
+        },
+        {
+          "from": [
+            "HOTEL WALTON,PHILADELPHIA,PA;",
+            "HOTEL WALTON,[PHILADELPHIA,PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL WALTON,PHILADELPHIA,PA;"
+        },
+        {
+          "from": [
+            "S.S. NACOOCHEE",
+            "SS NACOOCHEE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS NACOOCHEE"
+        },
+        {
+          "from": [
+            "RMS OCEANIC",
+            "R.M.S. OCEANIC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RMS OCEANIC"
+        },
+        {
+          "from": [
+            "ARGYLE, THE, BROOKLYN, NY",
+            "THE ARGYLE, BROOKLYN, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ARGYLE, THE, BROOKLYN, NY"
+        },
+        {
+          "from": [
+            "CHAMBERLIN'S, (WASHINGTON,D.C.)",
+            "CHAMBERLIN'S; [WASHINGTON,DC?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHAMBERLIN'S, (WASHINGTON,D.C.)"
+        },
+        {
+          "from": [
+            "117 WEST 34TH STREET,NEW YORK,NY",
+            "117 WEST 34TH STREET,[NEW YORK,NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "117 WEST 34TH STREET,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "UNION LEAGUE CLUB NY;",
+            "UNION LEAGUE CLUB, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION LEAGUE CLUB NY;"
+        },
+        {
+          "from": [
+            "METROPOLITAN CLUB, NEW YORK, NY",
+            "METROPOLITAN CLUB, [?NEW YORK, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "METROPOLITAN CLUB, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "PUT-IN-BAY-ISLAND, LAKE ERIE, OH;",
+            "PUT-IN-BAY-ISLAND, LAKE ERIE, OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PUT-IN-BAY-ISLAND, LAKE ERIE, OH;"
+        },
+        {
+          "from": [
+            "HOTEL ST. DENIS, NY",
+            "ST. DENIS HOTEL; NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ST. DENIS, NY"
+        },
+        {
+          "from": [
+            "DELMONICO'S",
+            "Delmonicos"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S"
+        },
+        {
+          "from": [
+            "\"THE ARGYLE\"",
+            "THE ARGYLE [?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "\"THE ARGYLE\""
+        },
+        {
+          "from": [
+            "MANHATTAN BEACH, LONG ISLAND [NY]",
+            "MANHATTAN BEACH, LONG ISLAND, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANHATTAN BEACH, LONG ISLAND [NY]"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. \"KOBE WARU\"",
+            "EN ROUTE ABOARD S.S. KOBE WARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. \"KOBE WARU\""
+        },
+        {
+          "from": [
+            "RESIDENCE-PALAIS, COPENHAGEN, DENMARK",
+            "[RESIDENCE-PALAIS, COPENHAGEN, DENMARK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RESIDENCE-PALAIS, COPENHAGEN, DENMARK"
+        },
+        {
+          "from": [
+            "GERMANTOWN (PA?)",
+            "[GERMANTOWN, PA?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GERMANTOWN , PA"
+        },
+        {
+          "from": [
+            "DAMPFER; H.H. MEIER",
+            "DAMPFER \"H.H. MEIER\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DAMPFER; H.H. MEIER"
+        },
+        {
+          "from": [
+            "BATTLE CREEK, MI",
+            "BATTLE CREEK, MI;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BATTLE CREEK, MI"
+        },
+        {
+          "from": [
+            "OMAHA NEBRASKA",
+            "OMAHA, NEBRASKA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OMAHA NEBRASKA"
+        },
+        {
+          "from": [
+            "114 WEST FOURTEENTH STREET, NEW YORK",
+            "114 WEST FOURTEENTH STREET, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "114 WEST FOURTEENTH STREET, NEW YORK"
+        },
+        {
+          "from": [
+            "GERMANY(?)",
+            "[GERMANY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GERMANY"
+        },
+        {
+          "from": [
+            "NEW WILLARD [WASHINGTON, [DC]",
+            "NEW WILLARD, WASHINGTON, DC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW WILLARD [WASHINGTON, [DC]"
+        },
+        {
+          "from": [
+            "CINCINNATI , OHIO",
+            "CINCINNATI, OHIO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CINCINNATI , OHIO"
+        },
+        {
+          "from": [
+            "DAMPFER KAISER WILHELM DER GROSSE;",
+            "DAMPFER \"KAISER WILHELM DER GROSSE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DAMPFER KAISER WILHELM DER GROSSE;"
+        },
+        {
+          "from": [
+            "ELLICOTT SQUARE, BUFFALO, NY",
+            "ELLICOTT SQUARE, BUFFALO, [NY];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ELLICOTT SQUARE, BUFFALO, NY"
+        },
+        {
+          "from": [
+            "BRUNSWICK,THE,BOSTON,[MASS]",
+            "BRUNSWICK,THE,BOSTON[MASS]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BRUNSWICK,THE,BOSTON,[MASS]"
+        },
+        {
+          "from": [
+            "CONVENTION HALL, (BUFFALO, NY?)",
+            "CONVENTION HALL, BUFFALO, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CONVENTION HALL, (BUFFALO, NY?)"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA [NY?]",
+            "WALDORF-ASTORIA, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA [NY?]"
+        },
+        {
+          "from": [
+            "ASCOT [ENGLAND]",
+            "ASCOT, ENGLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASCOT [ENGLAND]"
+        },
+        {
+          "from": [
+            "LOGAN HOUSE, ALTOONA, PA",
+            "LOGAN HOUSE; ALTOONA, PA;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LOGAN HOUSE, ALTOONA, PA"
+        },
+        {
+          "from": [
+            "PENN.",
+            "PENN;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PENN."
+        },
+        {
+          "from": [
+            "NARRAGANSETT PIER R.I.",
+            "NARRAGANSETT PIER, RI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NARRAGANSETT PIER R.I."
+        },
+        {
+          "from": [
+            "WORCESTER, MASS",
+            "WORCESTER, MASS;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WORCESTER, MASS"
+        },
+        {
+          "from": [
+            "UNION LEAGUE,(PHILADELPHIA,PA)",
+            "UNION LEAGUE,[PHILADELPHIA,PA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION LEAGUE,(PHILADELPHIA,PA)"
+        },
+        {
+          "from": [
+            "UNION CLUB",
+            "UNION CLUB, (?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION CLUB"
+        },
+        {
+          "from": [
+            "PULLMAN DINING CAR SERVICE EN ROUTE",
+            "PULLMAN DINING CAR SERVICE (EN ROUTE?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PULLMAN DINING CAR SERVICE EN ROUTE"
+        },
+        {
+          "from": [
+            "DELMONICO'S,[NEW YORK, N.Y.]",
+            "[DELMONICO'S,NEW YORK NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,[NEW YORK, N.Y.]"
+        },
+        {
+          "from": [
+            "EN ROUTE S.S VADERLAND",
+            "EN ROUTE S.S. VADERLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE S.S VADERLAND"
+        },
+        {
+          "from": [
+            "ACADEMY OF MUSIC BROOKLYN, NY",
+            "ACADEMY OF MUSIC, [BROOKLYN, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ACADEMY OF MUSIC BROOKLYN, NY"
+        },
+        {
+          "from": [
+            "FAIRMONT HOTEL [SAN FRANCISCO, CA]",
+            "FAIRMONT HOTEL, SAN FRANCISCO, CA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FAIRMONT HOTEL [SAN FRANCISCO, CA]"
+        },
+        {
+          "from": [
+            "PARK ROW BLDG. [NY]",
+            "PARK ROW BLDG., [NY, NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARK ROW BLDG. [NY]"
+        },
+        {
+          "from": [
+            "ST.DENIS HOTEL,NY",
+            "ST.DENIS HOTEL[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST.DENIS HOTEL,NY"
+        },
+        {
+          "from": [
+            "The Plaza",
+            "PLAZA, THE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "The Plaza"
+        },
+        {
+          "from": [
+            "COLORADO SPRINGS, CO",
+            "[COLORADO SPRINGS, CO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COLORADO SPRINGS, CO"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. WESTERNLAND",
+            "EN ROUTE ABOARD S.S. WESTERNLAND;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. WESTERNLAND"
+        },
+        {
+          "from": [
+            "ARGYLE,THE,BROOKLYN,NY",
+            "ARGYLE,THE,[BROOKLYN,NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ARGYLE,THE,BROOKLYN,NY"
+        },
+        {
+          "from": [
+            "PUT-IN-BAY, OH",
+            "PUT-IN-BAY, OH;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PUT-IN-BAY, OH"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT LA TOURAINE",
+            "ABOARD PAQUEBOT \"LA TOURAINE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT LA TOURAINE"
+        },
+        {
+          "from": [
+            "AUDITORIUM",
+            "AUDITORIUM, (?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AUDITORIUM"
+        },
+        {
+          "from": [
+            "HOTEL IROQUOIS,(BUFFALO,N.Y.)",
+            "HOTEL IROQUOIS,BUFFALO,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL IROQUOIS,(BUFFALO,N.Y.)"
+        },
+        {
+          "from": [
+            "HOTEL CONTINENTAL (PARIS, FRANCE?)",
+            "HOTEL CONTINENTAL, [PARIS, FRANCE]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL CONTINENTAL (PARIS, FRANCE?)"
+        },
+        {
+          "from": [
+            "GLENWOOD SPRINGS, CO",
+            "[GLENWOOD SPRINGS, CO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GLENWOOD SPRINGS, CO"
+        },
+        {
+          "from": [
+            "PAWLING, NY",
+            "PAWLING NY(?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PAWLING, NY"
+        },
+        {
+          "from": [
+            "R.M.S.ROTTERDAM",
+            "RMS-ROTTERDAM"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S.ROTTERDAM"
+        },
+        {
+          "from": [
+            "SS KAISER WILHELM DER GROSSE",
+            "S.S. \"KAISER WILHELM DER GROSSE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS KAISER WILHELM DER GROSSE"
+        },
+        {
+          "from": [
+            "ABOARD 'PRINZ FRIEDRICH WILHELM'",
+            "ABOARD PRINZ FRIEDRICH WILHELM''"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD 'PRINZ FRIEDRICH WILHELM'"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD ABOVE",
+            "EN ROUTE ABOARD ABOVE (?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD ABOVE"
+        },
+        {
+          "from": [
+            "PUT-IN-BAY ISLAND, LAKE ERIE, OH",
+            "PUT-IN-BAY ISLAND, LAKE ERIE, OH;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PUT-IN-BAY ISLAND, LAKE ERIE, OH"
+        },
+        {
+          "from": [
+            "RUSSELL HOUSE, DETROIT, MI",
+            "RUSSELL HOUSE; DETROIT, MI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RUSSELL HOUSE, DETROIT, MI"
+        },
+        {
+          "from": [
+            "NEW ORLEANS, LA",
+            "NEW ORLEANS, [LA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW ORLEANS, LA"
+        },
+        {
+          "from": [
+            "BAR HARBOR [ME]",
+            "BAR HARBOR, ME"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BAR HARBOR, ME"
+        },
+        {
+          "from": [
+            "SCHNELLDAMPFER \"AUGUSTE VICTORIA\"",
+            "SCHNELLDAMPFER: \"AUGUSTE VICTORIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SCHNELLDAMPFER \"AUGUSTE VICTORIA\""
+        },
+        {
+          "from": [
+            "S.S. ZEALANDIA",
+            "SS ZEALANDIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "S.S. ZEALANDIA"
+        },
+        {
+          "from": [
+            "EN ROUTE S.S. ZEELAND",
+            "EN ROUTE S.S ZEELAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE S.S. ZEELAND"
+        },
+        {
+          "from": [
+            "THE ARLINGTON,WASH.DC",
+            "THE ARLINGTON,WASH.DC."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE ARLINGTON,WASH.DC"
+        },
+        {
+          "from": [
+            "UNION LEAGUE",
+            "(UNION LEAGUE?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION LEAGUE"
+        },
+        {
+          "from": [
+            "MIRAMAR (?)",
+            "[MIRAMAR?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MIRAMAR"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT LA LORRAINE",
+            "ABOARD PAQUEBOT \"LA LORRAINE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT LA LORRAINE"
+        },
+        {
+          "from": [
+            "57 BROAD STREET, NY",
+            "57 BROAD STREET - NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "57 BROAD STREET, NY"
+        },
+        {
+          "from": [
+            "CINCINNATI, OH",
+            "CINCINNATI [OH]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CINCINNATI, OH"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS. KASUGA",
+            "EN ROUTE ABOARD SS KASUGA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS. KASUGA"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT \"LA BRETAGNE\"",
+            "ABOARD PAQUEBOT LA BRETAGNE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT \"LA BRETAGNE\""
+        },
+        {
+          "from": [
+            "ROANOKE,VA",
+            "ROANOKE,VA;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROANOKE,VA"
+        },
+        {
+          "from": [
+            "HOTEL MANHATTAN,NY",
+            "HOTEL MANHATTAN,[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MANHATTAN,NY"
+        },
+        {
+          "from": [
+            "MINNEAPOLIS CLUB, MINNEAPOLIS, MN",
+            "MINNEAPOLIS CLUB; MINNEAPOLIS, MN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MINNEAPOLIS CLUB, MINNEAPOLIS, MN"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. FRIESLAND",
+            "EN ROUTE ABOARD SS FRIESLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. FRIESLAND"
+        },
+        {
+          "from": [
+            "ATLANTIC CITY,NJ",
+            "ATLANTIC CITY,[NJ]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ATLANTIC CITY,NJ"
+        },
+        {
+          "from": [
+            "BWAY & 63RD ST. NY",
+            "B'WAY & 63RD ST. NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BWAY & 63RD ST. NY"
+        },
+        {
+          "from": [
+            "SYRACUSE NY",
+            "SYRACUSE, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SYRACUSE NY"
+        },
+        {
+          "from": [
+            "ADIRONDACKS, NY",
+            "ADIRONDACKS [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ADIRONDACKS, NY"
+        },
+        {
+          "from": [
+            "FRANCONIA NOTCH NH",
+            "FRANCONIA NOTCH NH,"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FRANCONIA NOTCH NH"
+        },
+        {
+          "from": [
+            "ALTOONA, PA",
+            "ALTOONA, PA;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ALTOONA, PA"
+        },
+        {
+          "from": [
+            "139 EIGHTH STREET BET. BROADWAY AND 4TH AVE., NEW YORK [NY];",
+            "139 EIGHTH STREET, BET. BROADWAY AND 4TH AVE., NEW YORK, [NY];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "139 EIGHTH STREET BET. BROADWAY AND 4TH AVE., NEW YORK [NY];"
+        },
+        {
+          "from": [
+            "LOS ANGELES, CA;",
+            "LOS ANGELES, CA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LOS ANGELES, CA;"
+        },
+        {
+          "from": [
+            "HOTEL MANHATTAN, NEW YORK",
+            "HOTEL MANHATTAN, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL MANHATTAN, NEW YORK"
+        },
+        {
+          "from": [
+            "MILWAUKEE, WI",
+            "MILWAUKEE, [WI];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MILWAUKEE, WI"
+        },
+        {
+          "from": [
+            "WINDSOR HOTEL,(NY)",
+            "WINDSOR HOTEL[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WINDSOR HOTEL,NY"
+        },
+        {
+          "from": [
+            "NAPLES [ITALY]",
+            "NAPLES, ITALY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NAPLES, ITALY"
+        },
+        {
+          "from": [
+            "KRUEGER AUDITORIUM (NEWARK NJ?)",
+            "KRUEGER AUDITORIUM, NEWARK, NJ"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "KRUEGER AUDITORIUM, NEWARK, NJ"
+        },
+        {
+          "from": [
+            "UNION LEAGUE CLUB, NEW YORK, NY",
+            "UNION LEAGUE CLUB, [NEW YORK, NY?]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "UNION LEAGUE CLUB, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "SS \"FRIEDRICH DER GROSSE\"",
+            "SS FRIEDRICH DER GROSSE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS \"FRIEDRICH DER GROSSE\""
+        },
+        {
+          "from": [
+            "HOTEL ASTOR, NEW YORK",
+            "HOTEL ASTOR, [NEW YORK]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ASTOR, NEW YORK"
+        },
+        {
+          "from": [
+            "CHICAGO ATHLETIC ASSOCIATION",
+            "CHICAGO ATHLETIC ASSOCIATION;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHICAGO ATHLETIC ASSOCIATION"
+        },
+        {
+          "from": [
+            "ST. DENIS HOTEL (NEW YORK?)",
+            "ST. DENIS HOTEL, NEW YORK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. DENIS HOTEL (NEW YORK?)"
+        },
+        {
+          "from": [
+            "TERRACE GARDEN",
+            "TERRACE GARDEN,?"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TERRACE GARDEN"
+        },
+        {
+          "from": [
+            "66TH ST. & BWAY NY",
+            "66TH ST & B'WAY, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "66TH ST. & BWAY NY"
+        },
+        {
+          "from": [
+            "ST. CHARLES HOTEL, NEW ORLEANS LA",
+            "ST. CHARLES HOTEL, NEW ORLEANS, LA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. CHARLES HOTEL, NEW ORLEANS LA"
+        },
+        {
+          "from": [
+            "ELLICOTT CLUB, BUFFALO, NY",
+            "ELLICOTT CLUB (BUFFALO NY?)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ELLICOTT CLUB, BUFFALO, NY"
+        },
+        {
+          "from": [
+            "57 BROAD STREET, NEW YORK, [NY]",
+            "57 BROAD STREET, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "57 BROAD STREET, NEW YORK, [NY]"
+        },
+        {
+          "from": [
+            "CAMPOBELLO ISLAND",
+            "CAMPOBELLO ISLAND,"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CAMPOBELLO ISLAND"
+        },
+        {
+          "from": [
+            "HOTEL BELLEVUE",
+            "BELLEVUE HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL BELLEVUE"
+        },
+        {
+          "from": [
+            "HAVANA,CUBA",
+            "[HAVANA,CUBA]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAVANA,CUBA"
+        },
+        {
+          "from": [
+            "CECIL HOTEL, LONDON, ENGLAND",
+            "HOTEL CECIL, LONDON, ENGLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CECIL HOTEL, LONDON, ENGLAND"
+        },
+        {
+          "from": [
+            "SARATOGA SPRINGS,NY",
+            "SARATOGA SPRINGS,[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SARATOGA SPRINGS,NY"
+        },
+        {
+          "from": [
+            "WINDSOR CASTLE, ENGLAND",
+            "WINDSOR CASTLE, [ENGLAND]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WINDSOR CASTLE, ENGLAND"
+        },
+        {
+          "from": [
+            "NASHVILLE, TENN.",
+            "NASHVILLE, TENN;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASHVILLE, TENN."
+        },
+        {
+          "from": [
+            "HOTEL WILLARD, WASHINGTON, DC",
+            "WILLARD HOTEL, [WASHINGTON, DC]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL WILLARD, WASHINGTON, DC"
+        },
+        {
+          "from": [
+            "THE WALDORF ASTORIA",
+            "WALDORF ASTORIA, THE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE WALDORF ASTORIA"
+        },
+        {
+          "from": [
+            "SS WESTERNLAND, EN ROUTE",
+            "SS WESTERNLAND - EN ROUTE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS WESTERNLAND, EN ROUTE"
+        },
+        {
+          "from": [
+            "NARRAGANSETT PIER,R.I.",
+            "NARRAGANSETT PIER,RI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NARRAGANSETT PIER,R.I."
+        },
+        {
+          "from": [
+            "BUDAPEST, HUNGARY",
+            "BUDAPEST, (HUNGARY)"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BUDAPEST, HUNGARY"
+        },
+        {
+          "from": [
+            "SARATOGA, NY",
+            "SARATOGA, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SARATOGA, NY"
+        },
+        {
+          "from": [
+            "156 SECOND AVENUE (NY?)",
+            "156 SECOND AVENUE, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "156 SECOND AVENUE (NY?)"
+        },
+        {
+          "from": [
+            "TAYLOR'S HOTEL, JERSEY CITY [NJ]",
+            "TAYLOR'S HOTEL, JERSEY CITY, N.J."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TAYLOR'S HOTEL, JERSEY CITY [NJ]"
+        },
+        {
+          "from": [
+            "WHITEHALL ROOMS, THE HOTEL METROPOLE, LONDON [ENGLAND]",
+            "WHITEHALL ROOMS, THE HOTEL METROPOLE, LONDON, [ENGLAND]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WHITEHALL ROOMS, THE HOTEL METROPOLE, LONDON [ENGLAND]"
+        },
+        {
+          "from": [
+            "CHICAGO BEACH HOTEL [CHICAGO, IL]",
+            "CHICAGO BEACH HOTEL, CHICAGO, [IL];"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHICAGO BEACH HOTEL [CHICAGO, IL]"
+        },
+        {
+          "from": [
+            "[TOKYO, JAPAN]",
+            "TOKYO, JAPAN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TOKYO, JAPAN"
+        },
+        {
+          "from": [
+            "PARK ROW BUILDING [NY]",
+            "PARK ROW BUILDING, [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARK ROW BUILDING [NY]"
+        },
+        {
+          "from": [
+            "GRAND PACIFIC HOTEL",
+            "GRAND PACIFIC HOTEL,"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GRAND PACIFIC HOTEL"
+        }
+      ],
+      "description": "Mass edit cells in column place"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "DELMONICO'S,New York, NY",
+            "DELMONICO'S,[NEW YORK, N.Y.]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,New York, NY"
+        }
+      ],
+      "description": "Mass edit cells in column place"
+    },
+    {
+      "op": "core/mass-edit",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "place",
+      "expression": "value",
+      "edits": [
+        {
+          "from": [
+            "EN ROUTE ABOARD SCNELLDAMPFER (EXPRESS STEAMER) AUGUSTE VICTORIA",
+            "EN ROUTE ABOARD SCHNELLDAMPFER (EXPRESS STEAMER) AUGUSTE VICTORIA",
+            "EN ROUTE ABOARD SCHNELLDAMPFER (EXPRESS STEAMER) AUGUSTE-VICTORIA",
+            "EN ROUTE ABOARD SCHNELLDAMPMER (EXPRESS STEAMER) AUGUSTE VICTORIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SCNELLDAMPFER (EXPRESS STEAMER) AUGUSTE VICTORIA"
+        },
+        {
+          "from": [
+            "EN ROUTE",
+            "RN ROUTE",
+            "ON ROUTE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE"
+        },
+        {
+          "from": [
+            "ASHEVILLE,NC",
+            "ASHEVILLE, NC",
+            "ASHVILLE, NC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASHEVILLE,NC"
+        },
+        {
+          "from": [
+            "CLEVELAND, OH",
+            "CLEVELAND,OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLEVELAND, OH"
+        },
+        {
+          "from": [
+            "MIAMI BISCAYNE BAY,FLA.",
+            "MIAMI BISCAYNE BAY, FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MIAMI BISCAYNE BAY,FLA."
+        },
+        {
+          "from": [
+            "SS: KAMAKURA MARU",
+            "SS: KAMKURA MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS: KAMAKURA MARU"
+        },
+        {
+          "from": [
+            "MIAMI BISCAYNE BAY, FL",
+            "MIAMI BISCAYNE BAY,FL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MIAMI BISCAYNE BAY, FL"
+        },
+        {
+          "from": [
+            "ST. DENIS HOTEL",
+            "ST. DENNIS HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. DENIS HOTEL"
+        },
+        {
+          "from": [
+            "COPENHAGEN, DENMARK",
+            "COPENHAGEN,DENMARK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COPENHAGEN, DENMARK"
+        },
+        {
+          "from": [
+            "ASHEVILLE,NC",
+            "ASHEVILLE, NC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASHEVILLE,NC"
+        },
+        {
+          "from": [
+            "ALBANY, NY",
+            "ALBANY,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ALBANY, NY"
+        },
+        {
+          "from": [
+            "CHATTANOOGA, TN",
+            "CHATTANOOGA, TE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHATTANOOGA, TN"
+        },
+        {
+          "from": [
+            "MILWAUKEE, WI",
+            "MILWAUKEE,WI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MILWAUKEE, WI"
+        },
+        {
+          "from": [
+            "BERLIN, GERMANY",
+            "BERLIN,GERMANY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BERLIN, GERMANY"
+        },
+        {
+          "from": [
+            "MURRAY HILL HOTEL [NYC]",
+            "MURRAY HILL HOTEL [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MURRAY HILL HOTEL [NYC]"
+        },
+        {
+          "from": [
+            "ARCANUM HALL,ELIZABETH NJ",
+            "ARCANUM HALL,ELIZABETH,NJ"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ARCANUM HALL,ELIZABETH NJ"
+        },
+        {
+          "from": [
+            "VENDOME HOTEL,NY",
+            "VENDOME HOTEL,NYC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VENDOME HOTEL,NY"
+        },
+        {
+          "from": [
+            "MALONE, NJ",
+            "MALONE, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MALONE, NJ"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD FURST BISMARCK",
+            "EN ROUTE ABOARD FUST BISMARCK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD FURST BISMARCK"
+        },
+        {
+          "from": [
+            "WALDORF [NY]",
+            "WALDORF[NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF [NY]"
+        },
+        {
+          "from": [
+            "CINCINNATI, OH",
+            "CINCINNATI,OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CINCINNATI, OH"
+        },
+        {
+          "from": [
+            "EN ROUTE STEAMER AUGUST VICTORIA",
+            "EN ROUTE STEAMER AUGUSTE VICTORIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE STEAMER AUGUST VICTORIA"
+        },
+        {
+          "from": [
+            "DELMONICO'S,New York, NY",
+            "DELMONICO'S,NEW YORK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "NASSAU,BAHAMAS",
+            "NASSAU, BAHAMAS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NASSAU,BAHAMAS"
+        },
+        {
+          "from": [
+            "POSTDAMFER GRAF WALDERSEE",
+            "POSTDAMPFER GRAF WALDERSEE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "POSTDAMFER GRAF WALDERSEE"
+        },
+        {
+          "from": [
+            "\"KONIGIN LUISE\" AT SEA",
+            "\"KONIGIN LUSE\" AT SEA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "\"KONIGIN LUISE\" AT SEA"
+        },
+        {
+          "from": [
+            "GIBRALTAR, SPAIN",
+            "GIBRALTER, SPAIN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GIBRALTAR, SPAIN"
+        },
+        {
+          "from": [
+            "EN ROUTE S.S. ZEELAND",
+            "EN ROUTE S.S.ZEELAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE S.S. ZEELAND"
+        },
+        {
+          "from": [
+            "PARIS,FRANCE",
+            "PARIS, FRANCE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PARIS,FRANCE"
+        },
+        {
+          "from": [
+            "NEW YORK CITY, NY",
+            "NEW YORK CITY,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK CITY, NY"
+        },
+        {
+          "from": [
+            "SCHNELLDAMPFER \"AUGUSTE VICTORIA\"",
+            "SHNELLDAMPFER \"AUGUSTE VICTORIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SCHNELLDAMPFER \"AUGUSTE VICTORIA\""
+        },
+        {
+          "from": [
+            "117 WEST 34TH STREET,NEW YORK,NY",
+            "117WEST 34TH STREET,NEW YORK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "117 WEST 34TH STREET,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "PLYMOUTH, MA",
+            "PLYMOUTH, MI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PLYMOUTH, MA"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA, NEW YORK, NY",
+            "WALDORF ASTORIA, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "TAMPA, FLORIDA",
+            "TAMPA,FLORIDA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TAMPA, FLORIDA"
+        },
+        {
+          "from": [
+            "OLD POINT COMFORT, VA",
+            "OLD POINT COMFORT,VA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "OLD POINT COMFORT, VA"
+        },
+        {
+          "from": [
+            "CLINTON COUNTY, NY",
+            "CLINTON COUNTY,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLINTON COUNTY, NY"
+        },
+        {
+          "from": [
+            "ASHEVILLE, NC",
+            "ASHVILLE, NC"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ASHEVILLE, NC"
+        },
+        {
+          "from": [
+            "\"KONIGEN LUISE\" AT SEA",
+            "\"KONIGEN LOUISE\" AT SEA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "\"KONIGEN LUISE\" AT SEA"
+        },
+        {
+          "from": [
+            "TORONTO, CANADA",
+            "TORONTO,CANADA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "TORONTO, CANADA"
+        },
+        {
+          "from": [
+            "CORONADA BEACH, CA.",
+            "CORONADA BEACH,CA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CORONADA BEACH, CA."
+        },
+        {
+          "from": [
+            "PHILADELPHIA BOURSE",
+            "PHILADEPHIA BOURSE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PHILADELPHIA BOURSE"
+        },
+        {
+          "from": [
+            "SHANLEY'S, NY",
+            "SHANLEY'S,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SHANLEY'S, NY"
+        },
+        {
+          "from": [
+            "STEAMSHIP KAISER WILHELM DER GROSSE",
+            "STEAMSHIP KAISER WILHELM DER GROSSER"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "STEAMSHIP KAISER WILHELM DER GROSSE"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S.ZEELAND",
+            "EN ROUTE ABOARD S.S. ZEELAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S.ZEELAND"
+        },
+        {
+          "from": [
+            "MUNICH, GERMANY",
+            "MUNICH,GERMANY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MUNICH, GERMANY"
+        },
+        {
+          "from": [
+            "MILAN, ITALY",
+            "MILANO, ITALY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MILAN, ITALY"
+        },
+        {
+          "from": [
+            "PUT-IN-BAY ISLAND, LAKE ERIE, OH",
+            "PUT-IN-BAY ISAND, LAKE ERIE, OH"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PUT-IN-BAY ISLAND, LAKE ERIE, OH"
+        },
+        {
+          "from": [
+            "The Waldorf-Astoria",
+            "THE WALDOF-ASTORIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "The Waldorf-Astoria"
+        },
+        {
+          "from": [
+            "DELMONICO'S,NEW YORK,NY",
+            "DELMONICO'S NEW YORK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S,NEW YORK,NY"
+        },
+        {
+          "from": [
+            "The Waldorf-Astoria",
+            "THE WALDORF ASTORIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "THE WALDORF ASTORIA"
+        },
+        {
+          "from": [
+            "HOBOKEN, NJ",
+            "HOBOKEN,NJ"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOBOKEN, NJ"
+        },
+        {
+          "from": [
+            "HOTEL ST. DENIS, NY",
+            "HOTEL ST. DENIS,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL ST. DENIS, NY"
+        },
+        {
+          "from": [
+            "GRAND HOTEL, LONDON, ENGLAND",
+            "GRAND HOTEL,LONDON, ENGLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "GRAND HOTEL, LONDON, ENGLAND"
+        },
+        {
+          "from": [
+            "JERSEY CITY, NJ",
+            "JERSEY CITY, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "JERSEY CITY, NJ"
+        },
+        {
+          "from": [
+            "HOTEL STENTON",
+            "HOTEN STENTON"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL STENTON"
+        },
+        {
+          "from": [
+            "BERGEN, NORWAY",
+            "BERGEN,NORWAY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BERGEN, NORWAY"
+        },
+        {
+          "from": [
+            "HOTEL BRUNSWICK, NY",
+            "HOTEL BRUNSWICK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL BRUNSWICK, NY"
+        },
+        {
+          "from": [
+            "PALM BEACH, FL",
+            "PALM BEACH,FL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PALM BEACH, FL"
+        },
+        {
+          "from": [
+            "Jahreszeiten Eck",
+            "Jareszeiten Eck"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Jahreszeiten Eck"
+        },
+        {
+          "from": [
+            "SS FURST BISMARCK",
+            "SS FURST BISMARK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS FURST BISMARCK"
+        },
+        {
+          "from": [
+            "ON BOARD S.S.AMERIKA",
+            "ON BOARD S.S.AMERIKAS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ON BOARD S.S.AMERIKA"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. SOUTHWARK",
+            "ENROUTE ABOARD S.S. SOUTHWARK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. SOUTHWARK"
+        },
+        {
+          "from": [
+            "AMERICAN INN, PORTLAND OR",
+            "AMERICAN INN, PORTLAND,OR"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "AMERICAN INN, PORTLAND OR"
+        },
+        {
+          "from": [
+            "DELMONICO'S, NEW YORK, NY",
+            "DELMONICO'S,New York, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO'S, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "DENVER, COLO.",
+            "DENVER,COLO."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DENVER, COLO."
+        },
+        {
+          "from": [
+            "CHATTANOOGA, TN",
+            "CHATTANOOGA,TN"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHATTANOOGA, TN"
+        },
+        {
+          "from": [
+            "NEW YORK, NY",
+            "NEW YORK,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK, NY"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS.K0BE MARU",
+            "EN ROUTE ABOARD SS.KOBE MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS.K0BE MARU"
+        },
+        {
+          "from": [
+            "SYRACUSE NY",
+            "SYRACUSE,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SYRACUSE,NY"
+        },
+        {
+          "from": [
+            "DETROIT, MI",
+            "DETROIT,MI"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DETROIT, MI"
+        },
+        {
+          "from": [
+            "MELBOURNE, AUSTRALIA",
+            "MELBOURNE,AUSTRALIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MELBOURNE, AUSTRALIA"
+        },
+        {
+          "from": [
+            "MIAMI BISCAYNE BAY,FLA.",
+            "MIAAMI BISCAYNE BAY,FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MIAMI BISCAYNE BAY,FLA."
+        },
+        {
+          "from": [
+            "PLANTERS HOTEL, ST. LOUIS, [MO]",
+            "PLANTERS HOTEL, ST. LOUIS,[MO]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PLANTERS HOTEL, ST. LOUIS, [MO]"
+        },
+        {
+          "from": [
+            "MANHATTAN HOTEL, NY",
+            "MANHATTAN HOTEL,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANHATTAN HOTEL, NY"
+        },
+        {
+          "from": [
+            "VIRGINIA BEACH, VA",
+            "VIRGINIA BEACH,VA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "VIRGINIA BEACH, VA"
+        },
+        {
+          "from": [
+            "NIAGARA FALLS, NY",
+            "NIAGARA FALLS,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NIAGARA FALLS, NY"
+        },
+        {
+          "from": [
+            "ST. GEORGE HOTEL",
+            "ST.GEORGE HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. GEORGE HOTEL"
+        },
+        {
+          "from": [
+            "ATANTIC HOTEL, OCEAN CITY, MD",
+            "ATLANTIC HOTEL, OCEAN CITY, MD"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ATANTIC HOTEL, OCEAN CITY, MD"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. ZEALANDIA",
+            "EN ROUTE ABOARD S.S.ZEALANDIA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. ZEALANDIA"
+        },
+        {
+          "from": [
+            "PORTLAND,ME",
+            "PORTLAND,MA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PORTLAND,ME"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS.KOHE MARU",
+            "EN ROUTE ABOARD SS. KOHE MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS.KOHE MARU"
+        },
+        {
+          "from": [
+            "LUZERN, SWITZERLAND",
+            "LUZERN,SWITZERLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LUZERN, SWITZERLAND"
+        },
+        {
+          "from": [
+            "ST.AUGUSTINE,FLA.",
+            "ST.AAUGUSTINE,FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST.AUGUSTINE,FLA."
+        },
+        {
+          "from": [
+            "HAMBURG, GERMANY",
+            "HAMBURG,GERMANY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAMBURG, GERMANY"
+        },
+        {
+          "from": [
+            "QUEBEC, CANADA",
+            "QUEBEC,CANADA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "QUEBEC, CANADA"
+        },
+        {
+          "from": [
+            "WASHINGTON,D.C.",
+            "WASHINHTON,D.C."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WASHINGTON,D.C."
+        },
+        {
+          "from": [
+            "NARRAGANSETT PIER R.I.",
+            "NARRAGANSETT PIER,R.I."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NARRAGANSETT PIER R.I."
+        },
+        {
+          "from": [
+            "SARATOGA SPRINGS, NY",
+            "SARATOGA SPRINGS,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SARATOGA SPRINGS, NY"
+        },
+        {
+          "from": [
+            "HOEL FLANDERS",
+            "HOTEL FLANDERS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL FLANDERS"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD DAMPFER H.H. MEIER",
+            "EN ROUTE ABOARD DAMPFER H.H.MEIER"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD DAMPFER H.H. MEIER"
+        },
+        {
+          "from": [
+            "ST. AUGUSTINE, FL",
+            "ST. AUGUSTINE, FLA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST. AUGUSTINE, FL"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS. KINSHIN MARU",
+            "EN ROUTE ABOARD SS.KINSHIN MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS. KINSHIN MARU"
+        },
+        {
+          "from": [
+            "RECTOR'S ,NY",
+            "RECTOR'S,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "RECTOR'S ,NY"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS.KOBE MARU",
+            "EN ROUTE ABOARD SS.KOHE MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS.KOBE MARU"
+        },
+        {
+          "from": [
+            "EN ROUTE S.S.VADERLAND",
+            "EN ROUTE S.S VADERLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE S.S.VADERLAND"
+        },
+        {
+          "from": [
+            "SUNSET OGDEN & SHASTA ROUTES",
+            "SUNSET OGDEN & SHASTA ROUTE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SUNSET OGDEN & SHASTA ROUTES"
+        },
+        {
+          "from": [
+            "BELMAR,NJ",
+            "BELMAR, NJ"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BELMAR,NJ"
+        },
+        {
+          "from": [
+            "STEAMSHIP NORTH WEST",
+            "STEAMSHIP NORTHWEST"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "STEAMSHIP NORTH WEST"
+        },
+        {
+          "from": [
+            "Hotel Gramercy Park; 52 Gramercy Park North",
+            "Hotel Gramercy Park; 52 Gamercy Park North"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Hotel Gramercy Park; 52 Gramercy Park North"
+        },
+        {
+          "from": [
+            "BUFFALO, NY",
+            "BUFFALO,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BUFFALO, NY"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA, NEW YORK",
+            "WALDORF- ASTORIA, NEW YORK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA, NEW YORK"
+        },
+        {
+          "from": [
+            "BROADWAY, NY",
+            "BROADWAY,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BROADWAY, NY"
+        },
+        {
+          "from": [
+            "PORTLAND, ME",
+            "PORTLAND,ME"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PORTLAND, ME"
+        },
+        {
+          "from": [
+            "ALTOONA, PA",
+            "ALTOONA,PA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ALTOONA, PA"
+        },
+        {
+          "from": [
+            "ATLANTIC CITY, NJ",
+            "ATLANTIC CITY,NJ"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ATLANTIC CITY, NJ"
+        },
+        {
+          "from": [
+            "ROANOKE, VA",
+            "ROANOKE,VA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ROANOKE, VA"
+        },
+        {
+          "from": [
+            "CHATTANOOGA,TENN.",
+            "CHATTANOOGA, TENN."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHATTANOOGA,TENN."
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS KOBE MARU",
+            "EN ROUTE ABOARD SS.KOBE MARU"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS KOBE MARU"
+        },
+        {
+          "from": [
+            "DELMONICO,[NY]",
+            "DELMONICO [NY]"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DELMONICO,[NY]"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD SS. KASUGA",
+            "EN ROUTE ABOARD SS. KASUFA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD SS. KASUGA"
+        },
+        {
+          "from": [
+            "MIAMI BISCAYNE BAY,FLA.",
+            "MIAMI,BISCAYNE BAY,FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MIAMI BISCAYNE BAY,FLA."
+        },
+        {
+          "from": [
+            "FARGO, NORTH DAKOTA",
+            "FARGO,NORTH DAKOTA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FARGO, NORTH DAKOTA"
+        },
+        {
+          "from": [
+            "ENROUTE STEAMER \"AUGUSTE VICTORIA\"",
+            "ENROUTE SYEAMER \"AUGUSTE VICTORIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ENROUTE STEAMER \"AUGUSTE VICTORIA\""
+        },
+        {
+          "from": [
+            "HOTEL IROQUOIS, BUFFALO, NY",
+            "HOTEL IROQUOIS, BUFFALO,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HOTEL IROQUOIS, BUFFALO, NY"
+        },
+        {
+          "from": [
+            "WALDORF-ASTORIA HOTEL, NEW YORK, NY",
+            "WALDORF ASTORIA HOTEL, NEW YORK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WALDORF-ASTORIA HOTEL, NEW YORK, NY"
+        },
+        {
+          "from": [
+            "R.M.S. \"LUCANIA\"",
+            "R.M.S. \"LUNCANIA\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. \"LUCANIA\""
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD DAMPFER FRIEDRICH DER GROSSE",
+            "EN ROUTE ABOARD DAMPFER FRIEDRICH DER GROSSER"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD DAMPFER FRIEDRICH DER GROSSE"
+        },
+        {
+          "from": [
+            "CHICAGO, IL",
+            "CHCAGO, IL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CHICAGO, IL"
+        },
+        {
+          "from": [
+            "57 BROAD ST. NY",
+            "57 BROAD ST.NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "57 BROAD ST. NY"
+        },
+        {
+          "from": [
+            "PALACE HOTEL, SAN FRANCISCO, CA",
+            "PALACE HOTEL, SAN FRANCISCO, CAL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "PALACE HOTEL, SAN FRANCISCO, CA"
+        },
+        {
+          "from": [
+            "ABOARD PAQUEBOT LA LORRAINE",
+            "ABOARD PAQUEBOT LA LORAINE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD PAQUEBOT LA LORRAINE"
+        },
+        {
+          "from": [
+            "ST.AUGUSTINE,FLA.",
+            "ST.AUGUSTINE, FLA."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ST.AUGUSTINE,FLA."
+        },
+        {
+          "from": [
+            "CLEVELAND,OHIO",
+            "CLEVELAND, OHIO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CLEVELAND,OHIO"
+        },
+        {
+          "from": [
+            "BROOKLYN, NY",
+            "BROOKLYN,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BROOKLYN, NY"
+        },
+        {
+          "from": [
+            "Diner Car 372, San Francisco Overland Limited",
+            "Diner Car 374, San Francisco Overland Limited"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "Diner Car 372, San Francisco Overland Limited"
+        },
+        {
+          "from": [
+            "MALONE, NY",
+            "MALONE,NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MALONE, NY"
+        },
+        {
+          "from": [
+            "MANILA, P.I.",
+            "MANILA,P.I."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "MANILA, P.I."
+        },
+        {
+          "from": [
+            "SAN FRANCISCO, CA",
+            "SAN FRANCISCO,CA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SAN FRANCISCO, CA"
+        },
+        {
+          "from": [
+            "EN ROUTE ABOARD S.S. WESTERNLAND",
+            "ENROUTE ABOARD S.S. WESTERNLAND"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "EN ROUTE ABOARD S.S. WESTERNLAND"
+        },
+        {
+          "from": [
+            "LINTON HOTEL",
+            "SINTON HOTEL"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LINTON HOTEL"
+        },
+        {
+          "from": [
+            "SS KASUGA",
+            "SS KASUPA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SS KASUGA"
+        },
+        {
+          "from": [
+            "DAMPFER \"KONIGEN LUISE\"",
+            "DAMPFER \"KONIGIN LUISE\""
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "DAMPFER \"KONIGEN LUISE\""
+        },
+        {
+          "from": [
+            "SPRINGFIELD,MASS.",
+            "SPRINGFIELD, MASS."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SPRINGFIELD,MASS."
+        },
+        {
+          "from": [
+            "SUMMERVILLE, S.C.",
+            "SOMMERVILLE, S.C."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "SUMMERVILLE, S.C."
+        },
+        {
+          "from": [
+            "The Waldorf-Astoria",
+            "The Waldorf-Astora"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "The Waldorf-Astoria"
+        },
+        {
+          "from": [
+            "COLUMBUS, OHIO",
+            "COLUMBUS,OHIO"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "COLUMBUS, OHIO"
+        },
+        {
+          "from": [
+            "WATSON HOUSE, BABLON, L.I., N.Y.",
+            "WATSON HOUSE, BABYLON, L.I., N.Y."
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "WATSON HOUSE, BABLON, L.I., N.Y."
+        },
+        {
+          "from": [
+            "NEW YORK, NY",
+            "NEW YOK, NY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "NEW YORK, NY"
+        },
+        {
+          "from": [
+            "BALTIMORE, MD",
+            "BALTIMORE,MD"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "BALTIMORE, MD"
+        },
+        {
+          "from": [
+            "FRANKFURT, GERMANY",
+            "FRANKFORT, GERMANY"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FRANKFURT, GERMANY"
+        },
+        {
+          "from": [
+            "HAVANA, CUBA",
+            "HABANA, CUBA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAVANA, CUBA"
+        },
+        {
+          "from": [
+            "ABOARD KRONPRINZESSIN CECILIE",
+            "ABOARD KRONPRINSESSIN CECILIE"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD KRONPRINZESSIN CECILIE"
+        },
+        {
+          "from": [
+            "FARGO, ND",
+            "FARGO, NK"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "FARGO, ND"
+        },
+        {
+          "from": [
+            "CINCINNATI, OH",
+            "CINCINNATI, 0H"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "CINCINNATI, OH"
+        },
+        {
+          "from": [
+            "HAVANA, CUBA",
+            "HAVANA,CUBA"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HAVANA, CUBA"
+        },
+        {
+          "from": [
+            "ABOARD U.S.M.S. ST. LOUIS",
+            "ABOARD U.S.M.S.ST. LOUIS"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "ABOARD U.S.M.S. ST. LOUIS"
+        },
+        {
+          "from": [
+            "HELENA, MT",
+            "HELENA,MT"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "HELENA, MT"
+        },
+        {
+          "from": [
+            "R.M.S. ROTTERDAM",
+            "R.M.S.ROTTERDAM"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "R.M.S. ROTTERDAM"
+        },
+        {
+          "from": [
+            "LOS ANGELES, CA;",
+            "LOS ANGELES, CAL;"
+          ],
+          "fromBlank": false,
+          "fromError": false,
+          "to": "LOS ANGELES, CA;"
+        }
+      ],
+      "description": "Mass edit cells in column place"
+    }
+]

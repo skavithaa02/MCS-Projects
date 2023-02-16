@@ -1,0 +1,8 @@
+SELECT distinct  d.name, m.event, m.date, m.place, m.location, mi.price, mp.image_id
+FROM dish d, menu_item mi, menu m, menu_page mp
+WHERE d.id = mi.dish_id
+AND mi.menu_page_id = mp.id
+AND mp.menu_id = m.id
+AND m.place = 'NEW YORK, NY'
+AND m.date > '1900-01-01'
+order by date desc;
